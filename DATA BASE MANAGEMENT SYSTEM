@@ -1,0 +1,1246 @@
+Database Management System Lab Manual(DBMS)
+
+Branch: Computer Science & Engineering (CSE)				Subject Code: CSE406 
+Semester: Fourth (4th)							Batch: 2017 - 20
+
+
+List of Practical’s: 
+
+1. Executing DDL and DML commands. 
+2. Study of various type of Integrity Constraints. 
+3. Executing relational, logical and mathematical set operators using SQL. 
+4. Study of SELECT command with different clauses. 
+5. Study of GROUP functions (avg, count, max, min, Sum). 
+6. Executing Date & Time functions. 
+7. Executing DCL in SQL. 
+8. Study of various type of SET OPERATORS (Union, Intersect, Minus). 
+9. Study of Various type of JOINS. 
+10. Program using if then else in PL/SQL. 
+11. Program using for loop & while loop in PL/SQL. 
+12. Program using nested loop in PL/SQL.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Practical No.: 01
+
+Aim: Executing DDL and DML commands. 
+
+DML Commands:
+
+Commands	Description
+SELECT	Retrieves certain records from one or more tables.
+
+INSERT	Creates a record.
+UPDATE	Modifies records.
+DELETE	Deletes records.
+
+SELECT Statement:
+
+Syntax:
+
+•	SQL SELECT Statement
+
+SELECT column1, column2....columnN FROM   table_name;
+
+•	SQL DISTINCT Clause
+
+SELECT DISTINCT column1, column2....columnN FROM   table_name;
+
+•	SQL WHERE Clause
+
+SELECT column1, column2....columnN FROM   table_name WHERE  CONDITION;
+
+•	SQL AND/OR Clause
+
+SELECT column1, column2....columnN FROM   table_name WHERE  CONDITION-1 {AND|OR} CONDITION-2;
+
+•	SQL IN Clause
+
+SELECT column1, column2....columnN FROM   table_name WHERE  column_name IN (val-1, val-2,...val-N);
+
+•	SQL BETWEEN Clause
+
+SELECT column1, column2....columnN FROM   table_name WHERE  column_name BETWEEN val-1 AND val-2;
+
+
+
+
+•	SQL LIKE Clause
+
+SELECT column1, column2....columnN FROM   table_name WHERE  column_name LIKE { PATTERN };
+
+•	SQL ORDER BY Clause
+
+SELECT column1, column2....columnN FROM   table_name WHERE  CONDITION
+ORDER BY column_name {ASC|DESC};
+
+•	SQL GROUP BY Clause
+
+SELECT SUM(column_name) FROM   table_name WHERE  CONDITION GROUP BY column_name;
+
+•	SQL COUNT Clause
+
+SELECT COUNT(column_name) FROM   table_name WHERE  CONDITION;
+
+•	SQL HAVING Clause
+
+SELECT SUM(column_name) FROM   table_name WHERE  CONDITION GROUP BY column_name HAVING (arithematic function condition);
+
+
+INSERT Statement:
+
+Syntax:
+
+INSERT INTO TABLE_NAME (column1, column2, column3,...columnN) VALUES (value1, value2, value3,...valueN);
+
+Example:
+
+The following statements would create six records in the CUSTOMERS table.
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (1, 'Ramesh', 32, 'Ahmedabad', 2000.00 );
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (2, 'Khilan', 25, 'Delhi', 1500.00 );
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (3, 'kaushik', 23, 'Kota', 2000.00 );
+
+
+
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (4, 'Chaitali', 25, 'Mumbai', 6500.00 );
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (5, 'Hardik', 27, 'Bhopal', 8500.00 );
+
+INSERT INTO CUSTOMERS (ID,NAME,AGE,ADDRESS,SALARY)
+VALUES (6, 'Komal', 22, 'MP', 4500.00 );
+
+**You can create a record in the CUSTOMERS table by using the second syntax as shown below.
+
+INSERT INTO CUSTOMERS 
+VALUES (7, 'Muffy', 24, 'Indore', 10000.00 );
+
+Output:
+
+| ID | NAME     | AGE | ADDRESS   | SALARY  |
+|  1 | Ramesh     |  32 |   Ahmedabad |  2000.00 |
+|  2 | Khilan       |  25 |   Delhi            |  1500.00 |
+|  3 | kaushik     |  23 |   Kota             |  2000.00 |
+|  4 | Chaitali     |  25 |   Mumbai        |  6500.00 |
+|  5 | Hardik       |  27 |   Bhopal          |  8500.00 |
+|  6 | Komal       |  22 |   MP                |  4500.00 |
+|  7 | Muffy       |  24 |   Indore           | 10000.00 |
+
+UPDATE Statement:
+
+Syntax:
+
+UPDATE table_name SET column1 = value1, column2 = value2...., columnN = valueN
+WHERE [condition];
+
+Example:
+
+Consider the CUSTOMERS table having the following records −
+| ID | NAME     | AGE | ADDRESS   | SALARY  |
+|  1 | Ramesh     |  32 |   Ahmedabad |  2000.00 |
+|  2 | Khilan       |  25 |   Delhi            |  1500.00 |
+|  3 | kaushik     |  23 |   Kota             |  2000.00 |
+|  4 | Chaitali     |  25 |   Mumbai        |  6500.00 |
+|  5 | Hardik       |  27 |   Bhopal          |  8500.00 |
+|  6 | Komal       |  22 |   MP                |  4500.00 |
+|  7 | Muffy       |  24 |   Indore           | 10000.00 |
+
+The following query will update the ADDRESS for a customer whose ID number is 6 in the table.
+
+SQL> UPDATE CUSTOMERS SET ADDRESS = 'Pune' WHERE ID = 6;
+
+Output:
+
+Now, the CUSTOMERS table would have the following records −
+
+| ID | NAME     | AGE | ADDRESS   | SALARY  |
+|  1 | Ramesh     |  32 |   Ahmedabad |  2000.00 |
+|  2 | Khilan       |  25 |   Delhi            |  1500.00 |
+|  3 | kaushik     |  23 |   Kota             |  2000.00 |
+|  4 | Chaitali     |  25 |   Mumbai        |  6500.00 |
+|  5 | Hardik       |  27 |   Bhopal          |  8500.00 |
+|  6 | Komal       |  22 |   Pune              |  4500.00 |
+|  7 | Muffy       |  24 |   Indore           | 10000.00 |
+
+Delete Statement:
+
+Syntax:
+
+DELETE FROM table_name WHERE [condition];
+
+Example:
+
+Consider the CUSTOMERS table having the following records −
+| ID | NAME     | AGE | ADDRESS   | SALARY  |
+|  1 | Ramesh     |  32 |   Ahmedabad |  2000.00 |
+|  2 | Khilan       |  25 |   Delhi            |  1500.00 |
+|  3 | kaushik     |  23 |   Kota             |  2000.00 |
+|  4 | Chaitali     |  25 |   Mumbai        |  6500.00 |
+|  5 | Hardik       |  27 |   Bhopal          |  8500.00 |
+|  6 | Komal       |  22 |   MP                |  4500.00 |
+|  7 | Muffy       |  24 |   Indore           | 10000.00 |
+
+The following code has a query, which will DELETE a customer, whose ID is 6.
+
+SQL> DELETE FROM CUSTOMERS WHERE ID = 6;
+
+| ID | NAME     | AGE | ADDRESS   | SALARY  |
+|  1 | Ramesh     |  32 |   Ahmedabad |  2000.00 |
+|  2 | Khilan       |  25 |   Delhi            |  1500.00 |
+|  3 | kaushik     |  23 |   Kota             |  2000.00 |
+|  4 | Chaitali     |  25 |   Mumbai        |  6500.00 |
+|  5 | Hardik       |  27 |   Bhopal          |  8500.00 |
+|  7 | Muffy       |  24 |   Indore           | 10000.00 |
+
+
+**If you want to DELETE all the records from the CUSTOMERS table, you do not need to use the WHERE clause and the DELETE query would be as follows −
+
+SQL> DELETE FROM CUSTOMERS;
+
+Now, the CUSTOMERS table would not have any record.
+
+DDL Commands:
+
+Commands	Descriptions
+CREATE	It is used to create the database or its objects (like table, index, function, views, store procedure and triggers).
+DROP	It is used to delete objects from the database.
+ALTER	It is used to alter the structure of the database.
+TRUNCATE	It is used to remove all records from a table, including all spaces allocated for the records are removed.
+COMMENT	It is used to add comments to the data dictionary.
+RENAME	It is used to rename an object existing in the database.
+
+CREATE Statement:
+
+Create Database (Syntax) :
+
+CREATE DATABASE DatabaseName;
+
+Example:
+
+SQL> CREATE DATABASE testDB;
+
+Output:
+SQL> SHOW DATABASES;
+Database Name
+information_schema
+AMROOD
+TUTORIALSPOINT
+mysql
+orig
+test  
+testDB
+
+7 rows in set (0.00 sec)
+
+
+
+
+
+
+Create Table :
+
+Syntax:
+
+CREATE TABLE table_name(
+   column1 datatype,
+   column2 datatype,
+   column3 datatype,
+   .....
+   columnN datatype,
+   PRIMARY KEY( one or more columns )
+);
+
+Example:
+
+SQL> CREATE TABLE CUSTOMERS(
+   ID   INT              NOT NULL,
+   NAME VARCHAR (20)     NOT NULL,
+   AGE  INT              NOT NULL,
+   ADDRESS  CHAR (25) ,
+   SALARY   DECIMAL (18, 2),       
+   PRIMARY KEY (ID)
+);
+
+You can verify if your table has been created successfully by looking at the message displayed by the SQL server, otherwise you can use the DESC command as follows :
+
+SQL> DESC CUSTOMERS;
+
+Field	Type	Null	Key	Default	Extra
+ID	INT(11)	No	PRI		
+NAME	VARCHAR(20)	No			
+AGE	INT(11)	No			
+ADDRESS	CHAR(25)	Yes		NULL	
+SALARY	DECIMAL (18,2)	Yes		NULL	
+
+5 rows in set (0.00 sec).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Practical No.: 02
+
+Aim: Study of various types of Integrity Constraints.
+
+Explanation:
+
+Constraints could be either on a column level or a table level. The column level constraints are applied only to one column, whereas the table level constraints are applied to the whole table.
+
+Following are some of the most commonly used constraints available in SQL. 
+
+•	NOT NULL Constraint − Ensures that a column cannot have NULL value.
+•	DEFAULT Constraint − Provides a default value for a column when none is specified.
+•	UNIQUE Constraint − Ensures that all values in a column are different.
+•	PRIMARY Key − Uniquely identifies each row/record in a database table.
+•	FOREIGN Key − Uniquely identifies a row/record in any of the given database table.
+•	CHECK Constraint − The CHECK constraint ensures that all the values in a column satisfies certain conditions.
+•	INDEX − Used to create and retrieve data from the database very quickly.
+
+Constraints can be specified when a table is created with the CREATE TABLE statement or you can use the ALTER TABLE statement to create constraints even after the table is created.
+
+Dropping Constraints
+
+Any constraint that you have defined can be dropped using the ALTER TABLE command with the DROP CONSTRAINT option.
+
+For example, to drop the primary key constraint in the EMPLOYEES table, you can use the following command.
+
+ALTER TABLE EMPLOYEES DROP CONSTRAINT EMPLOYEES_PK;
+
+For example, to drop the primary key constraint for a table in SQL, you can use the following command.
+
+ALTER TABLE EMPLOYEES DROP PRIMARY KEY;
+
+Some implementations allow you to disable constraints. Instead of permanently dropping a constraint from the database, you may want to temporarily disable the constraint and then enable it later.
+
+Integrity Constraints
+
+Integrity constraints are used to ensure accuracy and consistency of the data in a relational database. Data integrity is handled in a relational database through the concept of referential integrity.
+
+
+There are many types of integrity constraints that play a role in Referential Integrity (RI). 
+
+These constraints include Primary Key, Foreign Key, Unique Constraints. 
+
+
+
+
+Practical No.: 03
+
+Aim: Executing relational, logical and mathematical set operator’s using SQL.
+
+Procedure:
+
+SQL supports few Set operations which can be performed on the table data. These are used to get meaningful results from data stored in the table, under different special conditions.
+
+There are 4 different types of SET operations.
+
+•	UNION
+•	UNION ALL
+•	INTERSECT
+•	MINUS
+
+UNION: 
+UNION is used to combine the results of two or more SELECT statements. However it will eliminate duplicate rows from its resultset. In case of union, number of columns and datatype must be same in both the tables, on which UNION operation is being applied.
+ 
+Example of UNION:
+
+1st Table:
+
+ID	Name
+1	Abhi
+2	Adam
+
+2nd Table:
+
+ID	Name
+2	Adam
+3	Chester
+
+
+
+Syntax:
+
+ELECT * FROM First 
+UNION
+SELECT * FROM Second;
+
+Output:
+
+ID	Name
+1	Abhi
+2	Adam
+3	Chester
+
+UNION ALL
+This operation is similar to Union. But it also shows the duplicate rows.
+ 
+Example of Union All
+The First table,
+ID	Name
+1	Abhi
+2	Adam
+The Second table,
+ID	Name
+2	Adam
+3	Chester
+
+Syntax:
+SELECT * FROM First 
+UNION ALL
+SELECT * FROM Second;
+
+
+Output:
+ID	Name
+1	Abhi
+2	Adam
+2	Adam
+3	Chester
+
+INTERSECT
+Intersect operation is used to combine two SELECT statements, but it only retuns the records which are common from both SELECT statements. In case of Intersect the number of columns and data type must be same.
+
+ 
+Example of Intersect
+The First table,
+ID	Name
+1	Abhi
+2	Adam
+
+The Second table,
+ID	Name
+2	Adam
+3	Chester
+Syntax:
+SELECT * FROM First 
+INTERSECT
+SELECT * FROM Second;
+
+Output:
+
+ID	Name
+2	Adam
+
+
+
+MINUS
+The Minus operation combines results of two SELECT statements and return only those in the final result, which belongs to the first set of the result.
+
+ 
+
+Example of Minus
+The First table,
+ID	Name
+1	Abhi
+2	Adam
+
+The Second table,
+ID	Name
+2	Adam
+3	Chester
+
+Syntax:
+SELECT * FROM First 
+MINUS
+SELECT * FROM Second;
+
+Output:
+
+ID	Name
+1	Abhi
+
+
+
+
+
+
+
+
+
+Practical No.: 04
+
+Aim: Study of SELECT command with different clauses.
+
+
+SELECT Statement:
+
+Syntax:
+
+•	SQL SELECT Statement
+
+SELECT column1, column2....columnN FROM   table_name;
+
+•	SQL DISTINCT Clause
+
+SELECT DISTINCT column1, column2....columnN FROM   table_name;
+
+•	SQL WHERE Clause
+
+SELECT column1, column2....columnN FROM   table_name WHERE  CONDITION;
+
+•	SQL AND/OR Clause
+
+SELECT column1, column2....columnN FROM   table_name WHERE  CONDITION-1 {AND|OR} CONDITION-2;
+
+•	SQL IN Clause
+
+SELECT column1, column2....columnN FROM   table_name WHERE  column_name IN (val-1, val-2,...val-N);
+
+•	SQL BETWEEN Clause
+
+SELECT column1, column2....columnN FROM   table_name WHERE  column_name BETWEEN val-1 AND val-2;
+
+•	SQL LIKE Clause
+
+SELECT column1, column2....columnN FROM   table_name WHERE  column_name LIKE { PATTERN };
+
+•	SQL ORDER BY Clause
+
+SELECT column1, column2....columnN FROM   table_name WHERE  CONDITION
+ORDER BY column_name {ASC|DESC};
+
+
+
+
+
+
+•	SQL GROUP BY Clause
+
+SELECT SUM(column_name) FROM   table_name WHERE  CONDITION GROUP BY column_name;
+
+•	SQL COUNT Clause
+
+SELECT COUNT(column_name) FROM   table_name WHERE  CONDITION;
+
+•	SQL HAVING Clause
+
+SELECT SUM(column_name) FROM   table_name WHERE  CONDITION GROUP BY column_name HAVING (arithematic function condition);
+
+
+Practical No.: 5
+
+Aim: Study of GROUP functions (avg, count, max, min, Sum). 
+
+Explanation:
+
+GROUP BY Clause:
+
+The GROUP BY Clause is used to group rows with same values. The GROUP BY Clause is used together with the SQL SELECT statement. The SELECT statement used in the GROUP BY clause can only be used contain column names, aggregate functions, constants and expressions.
+
+Syntax:
+
+SELECT statements... GROUP BY column_name1[,column_name2,...] [HAVING condition];
+
+SQL aggregate functions
+
+An aggregate function allows you to perform a calculation on a set of values to return a single scalar value. We often use aggregate functions with the GROUP BY and HAVING clauses of the SELECT statement.
+
+The following are the most commonly used SQL aggregate functions:
+
+AVG – calculates the average of a set of values.
+COUNT – counts rows in a specified table or view.
+MIN – gets the minimum value in a set of values.
+MAX – gets the maximum value in a set of values.
+SUM – calculates the sum of values.
+
+
+
+AVG function example
+
+To calculate the average units in stock of the products.
+Syntax:
+
+SELECT AVG (unitsinstock) FROM products;
+
+To calculate units in stock by product category.
+Syntax:
+SELECT categoryid, AVG (unitsinstock) FROM products GROUP BY categoryid;
+
+COUNT function example:
+
+To get the number of products in the products table.
+
+Syntax:
+
+SELECT COUNT (*) FROM products;
+
+
+MIN function example:
+
+To get the minimum units in stock of products in the products table.
+Syntax:
+SELECT MIN (unitsinstock) FROM products;
+
+
+MAX function example:
+
+To get the maximum units in stock of products in the products table.
+
+Syntax:
+
+SELECT MAX(unitsinstock) FROM products;
+
+SUM function example:
+
+To calculate the sum of units in stock by product category.
+Syntax:
+
+SELECT categoryid, SUM(unitsinstock) FROM products GROUP BY categoryid;
+
+
+
+
+Practical No.: 6
+
+Aim: Executing Date & Time functions.
+
+Procedure:
+
+Function	Description
+GETDATE()	Returns the current date and time
+DATEPART()	Returns a single part of a date/time
+DATEADD()	Adds or subtracts a specified time interval from a date
+DATEDIFF()	Returns the time between two dates
+
+GETDATE () - Returns the current date and time
+
+Syntax:
+
+SELECT getdate();
+
+Output:
+
+2018/09/01.
+
+
+DATEPART() - Returns a single part of a date/time
+
+Syntax:
+
+DATEPART(interval, date);
+
+Example:
+
+SELECT DATEPART (year, '2017/08/25') AS DatePartInt;
+
+DATEADD() - Adds or subtracts a specified time interval from a date.
+
+Syntax:
+
+DATEADD (interval, number, date)
+
+Example:
+
+SELECT DATEADD (year, 1, '2017/08/25') AS DateAdd;
+
+DATEDIFF() - Returns the time between two dates.
+
+Syntax:
+
+DATEDIFF (interval, date1, date2)
+
+
+
+Example:
+
+SELECT DATEDIFF (year, '2017/08/25', '2011/08/25') AS DateDiff;
+
+
+Practical No.: 7
+
+Aim: Executing DCL in SQL.
+
+Explanation:
+
+DCL(Data Control Language) : 
+
+DCL includes commands such as GRANT and REVOKE which mainly deals with the rights, permissions and other controls of the database system.
+
+Commands:
+
+GRANT- gives user’s access privileges to database.
+REVOKE- withdraw user’s access privileges given by using the GRANT command.
+
+GRANT:
+
+•	Allow a User to create session
+
+ it is not even allowed to login and create a session until and unless proper permissions/priviliges are granted to the user.
+
+Syntax:
+
+GRANT CREATE SESSION TO username;
+
+•	Allow a User to create table
+
+To allow a user to create tables in the database, we can use the below command,
+
+Syntax:
+
+GRANT CREATE TABLE TO username;
+
+•	Provide user with space on table space to store table.
+
+Allowing a user to create table is not enough to start storing data in that table. We also must provide the user with privileges to use the available table space for their table and data.
+
+Syntax:
+
+ALTER USER username QUOTA UNLIMITED ON SYSTEM;
+
+
+
+
+
+•	Grant all privilege to a User
+sysdba is a set of privileges which has all the permissions in it. So if we want to provide all the privileges to any user, we can simply grant them the sysdba permission.
+
+Syntax:
+
+GRANT sysdba TO username;
+
+•	Grant permission to create any table
+
+Sometimes user is restricted from creating come tables with names which are reserved for system tables. But we can grant privileges to a user to create any table using the below command,
+
+Syntax:
+
+GRANT CREATE ANY TABLE TO username;
+
+•	Grant permission to drop any table
+
+if you want to allow user to drop any table from the database, then grant this privilege to the user.
+
+Syntax:
+
+GRANT DROP ANY TABLE TO username
+
+
+Revoke
+•	To take back Permissions
+
+if you want to take back the privileges from any user, use the REVOKE command.
+
+Syntax:
+
+REVOKE CREATE TABLE FROM username
+
+
+
+Practical No.: 8
+
+Aim: Study of various type of SET OPERATORS (Union, Intersect, Minus).
+
+Explanation:
+
+There are 4 different types of SET operations.
+
+•	UNION
+•	UNION ALL
+•	INTERSECT
+•	MINUS
+
+UNION: 
+UNION is used to combine the results of two or more SELECT statements. However it will eliminate duplicate rows from its resultset. In case of union, number of columns and datatype must be same in both the tables, on which UNION operation is being applied.
+ 
+Example of UNION:
+
+1st Table:
+
+ID	Name
+1	Abhi
+2	Adam
+
+2nd Table:
+
+ID	Name
+2	Adam
+3	Chester
+
+
+
+Syntax:
+
+ELECT * FROM First 
+UNION
+SELECT * FROM Second;
+
+Output:
+
+ID	Name
+1	Abhi
+2	Adam
+3	Chester
+
+UNION ALL
+This operation is similar to Union. But it also shows the duplicate rows.
+ 
+Example of Union All
+The First table,
+ID	Name
+1	Abhi
+2	Adam
+The Second table,
+ID	Name
+2	Adam
+3	Chester
+
+Syntax:
+SELECT * FROM First 
+UNION ALL
+SELECT * FROM Second;
+
+
+Output:
+ID	Name
+1	Abhi
+2	Adam
+2	Adam
+3	Chester
+
+INTERSECT
+Intersect operation is used to combine two SELECT statements, but it only retuns the records which are common from both SELECT statements. In case of Intersect the number of columns and data type must be same.
+
+ 
+Example of Intersect
+The First table,
+ID	Name
+1	Abhi
+2	Adam
+
+The Second table,
+ID	Name
+2	Adam
+3	Chester
+Syntax:
+SELECT * FROM First 
+INTERSECT
+SELECT * FROM Second;
+
+Output:
+
+ID	Name
+2	Adam
+
+
+
+MINUS
+The Minus operation combines results of two SELECT statements and return only those in the final result, which belongs to the first set of the result.
+
+ 
+
+Example of Minus
+The First table,
+ID	Name
+1	Abhi
+2	Adam
+
+The Second table,
+ID	Name
+2	Adam
+3	Chester
+
+Syntax:
+SELECT * FROM First 
+MINUS
+SELECT * FROM Second;
+
+Output:
+
+ID	Name
+1	Abhi
+
+
+Practical No.: 9
+
+Aim: Study of Various type of JOINS.
+
+Explanation:
+
+SQL JOIN
+
+•	A SQL JOIN combines records from two tables.
+•	A JOIN locates related column values in the two tables.
+•	A query can contain zero, one, or multiple JOIN operations.
+•	INNER JOIN is the same as JOIN; the keyword INNER is optional.
+
+
+
+
+Types of JOIN:
+
+•	(INNER) JOIN: Returns records that have matching values in both tables
+•	LEFT (OUTER) JOIN: Return all records from the left table, and the matched records from the right table
+•	RIGHT (OUTER) JOIN: Return all records from the right table, and the matched records from the left table
+•	FULL (OUTER) JOIN: Return all records when there is a match in either left or right table
+
+(INNER) JOIN
+
+Syntax:
+
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+
+Example:
+
+selection from the "Orders" table & “Customer” table:
+OrderID	CustomerID	EmployeeID	OrderDate	ShipperID
+10308	2	7	1996-09-18	3
+10309	37	3	1996-09-19	1
+10310	77	8	1996-09-20	2
+CustomerID	CustomerName	ContactName	Address	City	PostalCode	Country
+1
+	Alfreds Futterkiste	Maria Anders	Obere Str. 57	Berlin	12209	Germany
+2	Ana Trujillo Emparedados y helados	Ana Trujillo	Avda. de la Constitución 2222	México D.F.	05021	Mexico
+3	Antonio Moreno Taquería	Antonio Moreno	Mataderos 2312	México D.F.	05023	Mexico
+
+
+The following SQL statement selects all orders with customer information:
+
+SELECT Orders.OrderID, Customers.CustomerName
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+
+
+SQL LEFT JOIN Keyword
+
+The LEFT JOIN keyword returns all records from the left table (table1), and the matched records from the right table (table2). The result is NULL from the right side, if there is no match.
+
+Syntax:
+
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name; 
+
+Example:
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+
+
+
+
+
+
+
+SQL RIGHT JOIN Keyword
+The RIGHT JOIN keyword returns all records from the right table (table2), and the matched records from the left table (table1). The result is NULL from the left side, when there is no match.
+Syntax:
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+Example:
+SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+FROM Orders
+RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+ORDER BY Orders.OrderID;
+
+SQL FULL OUTER JOIN Keyword
+
+The FULL OUTER JOIN keyword return all records when there is a match in either left (table1) or right (table2) table records.
+Note: FULL OUTER JOIN can potentially return very large result-sets!
+Syntax:
+SELECT column_name(s)
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column_name = table2.column_name
+WHERE condition;
+
+Example:
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+SQL Self JOIN
+
+A self JOIN is a regular join, but the table is joined with itself.
+
+
+
+Syntax:
+SELECT column_name(s)
+FROM table1 T1, table1 T2
+WHERE condition;
+
+Example:
+
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City 
+ORDER BY A.City;
+
+Practical No.: 10
+
+Aim: Program using if then else in PL/SQL.
+
+Explanation:
+
+The IF-THEN-ELSIF statement allows you to choose between several alternatives. An IF-THEN statement can be followed by an optional ELSIF...ELSE statement. The ELSIF clause lets you add additional conditions.
+
+When using IF-THEN-ELSIF statements there are a few points to keep in mind.
+
+•	It's ELSIF, not ELSEIF.
+•	An IF-THEN statement can have zero or one ELSE's and it must come after any ELSIF's.
+•	An IF-THEN statement can have zero to many ELSIF's and they must come before the ELSE.
+•	Once an ELSIF succeeds, none of the remaining ELSIF's or ELSE's will be tested.
+
+Syntax:
+
+The syntax of an IF-THEN-ELSIF Statement in PL/SQL programming language is −
+
+Program:
+
+IF(boolean_expression 1)THEN  
+   S1; -- Executes when the boolean expression 1 is true  
+ELSIF( boolean_expression 2) THEN 
+   S2;  -- Executes when the boolean expression 2 is true  
+ELSIF( boolean_expression 3) THEN 
+   S3; -- Executes when the boolean expression 3 is true  
+ELSE  
+   S4; -- executes when the none of the above condition is true  
+END IF;
+
+
+
+
+
+Example:
+
+DECLARE 
+   a number(3) := 100; 
+BEGIN 
+   IF ( a = 10 ) THEN 
+      dbms_output.put_line('Value of a is 10' ); 
+   ELSIF ( a = 20 ) THEN 
+      dbms_output.put_line('Value of a is 20' ); 
+   ELSIF ( a = 30 ) THEN 
+      dbms_output.put_line('Value of a is 30' ); 
+   ELSE 
+       dbms_output.put_line('None of the values is matching'); 
+   END IF; 
+   dbms_output.put_line('Exact value of a is: '|| a );  
+END;
+
+Output:
+
+None of the values is matching 
+Exact value of a is: 100  
+
+
+Practical No.: 11
+
+Aim: Program using for loop & while loop in PL/SQL.
+Explanation:
+while loop is used when a set of statements has to be executed as long as a condition is true, the  While loop is used. The condition is decided at the beginning of each iteration and continues until the condition becomes false.
+
+Syntax:
+
+WHILE LOOP:
+
+WHILE condition LOOP  
+ sequence_of_statements 
+END LOOP;
+
+Example:
+
+DECLARE 
+   a number(2) := 10; 
+BEGIN 
+   WHILE a < 20 LOOP 
+      dbms_output.put_line('value of a: ' || a); 
+      a := a + 1; 
+   END LOOP; 
+END;
+
+
+
+
+Output:
+
+value of a: 10 
+value of a: 11 
+value of a: 12 
+value of a: 13 
+value of a: 14 
+value of a: 15 
+value of a: 16 
+value of a: 17 
+value of a: 18 
+value of a: 19
+
+
+Syntax:
+
+FOR LOOP:
+
+FOR <loop_variable> in <lower_limit> .. <higher_limit> 
+LOOP
+<execution block starts>
+.
+.
+.
+<execution_block_ends>
+ END LOOP;
+
+Example:
+
+pl/sql program to find factorial of a number.
+
+Program:
+
+declare
+	n number;
+	fac number:=1;
+	i number;
+ 
+begin
+	n:=&n;
+ 
+	for i in 1..n
+	loop
+		fac:=fac*i;
+	end loop;
+ 
+	dbms_output.put_line('factorial='||fac);
+end;
+
+
+
+Output:
+Enter value for n: 10
+old 7: n:=&n;
+new 7: n:=10;
+factorial=3628800
+
+
+Practical No.: 12
+
+Aim: Program using nested loop in PL/SQL.
+
+Explanation:
+
+PL/SQL allows using one loop inside another loop.
+
+Syntax:
+
+•	A nested basic LOOP statement in PL/SQL is :
+
+LOOP 
+   Sequence of statements1 
+   LOOP 
+      Sequence of statements2 
+   END LOOP; 
+END LOOP;
+
+•	The syntax for a nested FOR LOOP statement in PL/SQL is
+
+FOR counter1 IN initial_value1 .. final_value1 LOOP 
+   sequence_of_statements1 
+   FOR counter2 IN initial_value2 .. final_value2 LOOP 
+      sequence_of_statements2 
+   END LOOP; 
+END LOOP;
+
+•	The syntax for a nested WHILE LOOP statement in Pascal is
+
+WHILE condition1 LOOP 
+   sequence_of_statements1 
+   WHILE condition2 LOOP 
+      sequence_of_statements2 
+   END LOOP; 
+END LOOP;
+
+Example:
+
+The program uses a nested basic loop to find the prime numbers from 2 to 100.
+
+
+
+DECLARE 
+   i number(3); 
+   j number(3); 
+BEGIN 
+   i := 2; 
+   LOOP 
+      j:= 2; 
+      LOOP 
+         exit WHEN ((mod(i, j) = 0) or (j = i)); 
+         j := j +1; 
+      END LOOP; 
+   IF (j = i ) THEN 
+      dbms_output.put_line(i || ' is prime'); 
+   END IF; 
+   i := i + 1; 
+   exit WHEN i = 50; 
+   END LOOP; 
+END;
+
+Output:
+
+2 is prime 
+3 is prime 
+5 is prime 
+7 is prime 
+11 is prime 
+13 is prime 
+17 is prime 
+19 is prime 
+23 is prime 
+29 is prime 
+31 is prime 
+37 is prime 
+41 is prime 
+43 is prime 
+47 is prime  
