@@ -1,0 +1,1383 @@
+List of Experiments: 
+1. Make a program to insert 10 elements in an array by taking user input. 
+2. Make a program that demonstrates deletion of elements from beginning, middle, last position from an array. 
+3. Make a program for merging of elements of two arrays. 
+4. Make a program that demonstrates PUSH operation of stack. 
+5. Make a program that demonstrates POP operation of stack. 
+6. Make a program to insert elements in a linear queue. 
+7. Make a program to insert elements in a circular queue. 
+8. Make a program that demonstrates the working of simple list for inserting elements at beginning position, middle position and at the end of list. 
+9. Make a program that demonstrates the working of circular list for inserting elements at beginning position, middle position and at the end of list. 
+10. Write a program for insertion sorting. 
+11. Write a program for bubble sorting. 
+12. Write a program for quick sort. 
+13. Write a program for merge sort. 
+14. Write a program for heap sort. 
+15. Make a program for binary search. 
+16. Make a program for linear search. 
+17. WAP to Create a Tree. 
+18. WAP to check whether a Tree is a Binary Search Tree. 
+19. WAP for Depth First Binary Tree Search.
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+1. Make a program to insert 10 elements in an array by taking user input. 
+
+#include <stdio.h>
+ 
+int main()
+{
+ int array[100], position, c, n, value;
+  printf("Enter number of elements in array\n");
+   scanf("%d", &n);
+ 
+   printf("Enter %d elements\n", n);
+ 
+   for (c = 0; c < n; c++)
+      scanf("%d", &array[c]);
+ 
+   printf("Enter the location where you wish to insert an element\n");
+   scanf("%d", &position);
+ 
+   printf("Enter the value to insert\n");
+   scanf("%d", &value);
+ 
+   for (c = n - 1; c >= position - 1; c--)
+      array[c+1] = array[c];
+ 
+   array[position-1] = value;
+ 
+   printf("Resultant array is\n");
+ 
+   for (c = 0; c <= n; c++)
+      printf("%d\n", array[c]);
+ 
+   return 0;
+}
+
+
+
+
+
+
+2. Make a program that demonstrates deletion of elements from beginning, middle, last position from an array. 
+#include <stdio.h>
+ 
+int main()
+{
+   int array[100], position, c, n;
+ 
+   printf("Enter number of elements in array\n");
+   scanf("%d", &n);
+ 
+   printf("Enter %d elements\n", n);
+ 
+   for (c = 0; c < n; c++)
+      scanf("%d", &array[c]);
+ 
+   printf("Enter the location where you wish to delete element\n");
+   scanf("%d", &position);
+ 
+   if (position >= n+1)
+      printf("Deletion not possible.\n");
+   else
+   {
+      for (c = position - 1; c < n - 1; c++)
+         array[c] = array[c+1];
+ 
+      printf("Resultant array:\n");
+ 
+      for (c = 0; c < n - 1; c++)
+         printf("%d\n", array[c]);
+   }
+ 
+   return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3. Make a program for merging of elements of two arrays. 
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+
+	int arr1[50], arr2[50], size1, size2, size, i, j, k, merge[100];
+	printf("Enter Array 1 Size : ");
+	scanf("%d",&size1);
+	printf("Enter Array 1 Elements : ");
+	for(i=0; i<size1; i++)
+	{
+		scanf("%d",&arr1[i]);
+	}
+	printf("Enter Array 2 Size : ");
+	scanf("%d",&size2);
+	printf("Enter Array 2 Elements : ");
+	for(i=0; i<size2; i++)
+	{
+		scanf("%d",&arr2[i]);
+	}
+	for(i=0; i<size1; i++)
+	{
+		merge[i]=arr1[i];
+	}
+	size=size1+size2;
+	for(i=0, k=size1; k<size && i<size2; i++, k++)
+	{
+		merge[k]=arr2[i];
+	}
+	printf("Now the new array after merging is :\n");
+	for(i=0; i<size; i++)
+	{
+		printf("%d  ",merge[i]);
+	}
+	getch();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. Make a program that demonstrates PUSH operation of stack. 
+
+#include<stdio.h>
+int main()
+{
+    int stack[10];
+    int max;
+    int num;
+    int top = -1;
+    int i;
+    int item;
+    //printf("Enter the maximum size of stack");
+    scanf("%d",&max);
+    //printf("Enter the no of elements in stack");
+    scanf("%d",&num);
+        //printf("Enter the elements of stack");
+    for(i=0;i<num;i++)//Fig 7
+    {
+        scanf("%d\n",&stack[i]);
+        top++;
+    }
+    if(top == max -1)//Fig 8
+    {
+        printf("Overflow");
+    }
+    else
+    {
+        //printf("Enter the item you want to insert\n");
+        scanf("%d",&item);
+        top = top + 1;//Fig 6
+        stack[top] = item;
+        printf("The stack after push operation is \n");
+        for(i=0;i<=num;i++)
+    {
+     printf("%d\n",stack[i]);
+        top++;
+    }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+5. Make a program that demonstrates POP operation of stack. 
+#include<stdio.h>
+
+int stack[100],choice,n,top,x,i;
+void push(void);
+void display(void);
+int main()
+{
+    //clrscr();
+    top=-1;
+    printf("\n Enter the size of STACK[MAX=100]:");
+    scanf("%d",&n);
+    printf("\n\t STACK OPERATIONS USING ARRAY");
+    printf("\n\t--------------------------------");
+    printf("\n\t 1.PUSH\n\t 2.DISPLAY\n\t3.EXIT");
+    do
+    {
+        printf("\n Enter the Choice:");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+            case 1:
+            {
+                push();
+                break;
+            
+            }
+            case 2:
+            {
+                display();
+                break;
+            }
+            case 3:
+            {
+                printf("\n\t EXIT POINT ");
+                break;
+            }
+            default:
+            {
+                printf ("\n\t Please Enter a Valid Choice(1/2/3)");
+            }
+                
+        }
+    }
+    while(choice!=3);
+    return 0;
+}
+void push()
+{
+    if(top>=n-1)
+    {
+        printf("\n\tSTACK is over flow");
+        
+    }
+    else
+    {
+        printf(" Enter a value to be pushed:");
+        scanf("%d",&x);
+        top++;
+        stack[top]=x;
+    }
+}
+void display()
+{
+    if(top>=0)
+    {
+        printf("\n The elements in STACK \n");
+        for(i=top; i>=0; i--)
+            printf("\n%d",stack[i]);
+        printf("\n Press Next Choice");
+    }
+    else
+    {
+        printf("\n The STACK is empty");
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. Make a program to insert elements in a linear queue. 
+#include <stdio.h>
+ 
+#define MAX 5
+ 
+//Declaration of Queue
+typedef struct queue
+{
+    int front   ;
+    int rear    ;
+    int ele[MAX]    ;
+}Queue;
+ 
+//Intialze Queue
+void init(Queue *q)
+{
+    q->rear  = -1;
+    q->front =  0;
+}
+ 
+//To check Queue is full or not
+int isFull(Queue *q)
+{
+    int full=0;
+ 
+    if( q->rear == MAX -1)
+        full = 1;
+ 
+    return full;
+}
+ 
+//To check Queue is empty or not
+int isEmpty(Queue *q)
+{
+    int empty=0;
+ 
+    if( q->front == q->rear+1 )
+        empty = 1;
+ 
+    return empty;
+}
+ 
+//Insert item into queue
+void insertQueue(Queue *q,int item)
+{
+    if( isFull(q) )
+    {
+        printf("\nQueue Overflow");
+        return;
+    }
+ 
+    q->ele[++(q->rear)] = item;
+    printf("\nInserted item : %d",item);
+}
+ 
+//Delete item from queue
+int deleteQueue(Queue *q, int * item)
+{
+    if( isEmpty(q) )
+    {
+        printf("\nQueue Underflow");
+        return -1;
+    }
+    *item = q->ele[(q->front)++];
+    return 0;
+}
+ 
+int main()
+{
+    int item = 0;   
+    Queue q;
+ 
+    init(&q);
+ 
+    insertQueue(&q,10);
+    insertQueue(&q,20);
+    insertQueue(&q,30);
+    insertQueue(&q,40);
+    insertQueue(&q,50);
+    insertQueue(&q,60);
+ 
+    if( deleteQueue( &q, &item ) == 0 )
+        printf("\nDeleted item : %d",item);
+    if( deleteQueue( &q, &item ) == 0 )
+        printf("\nDeleted item : %d",item);
+    if( deleteQueue( &q, &item ) == 0 )
+        printf("\nDeleted item : %d",item);
+    if( deleteQueue( &q, &item ) == 0 )
+        printf("\nDeleted item : %d",item);
+    if( deleteQueue( &q, &item ) == 0 )
+        printf("\nDeleted item : %d",item);
+    if( deleteQueue( &q, &item ) == 0 )
+        printf("\nDeleted item : %d",item);
+ 
+    printf("\n");
+    return 0;   
+}
+
+
+
+
+
+
+
+7. Make a program to insert elements in a circular queue. 
+
+# include<stdio.h>
+# include<string.h>
+# include<ctype.h>
+# include<stdlib.h>
+
+# define size 6
+
+int L, U;  /* L means lower bound U means upper bound */
+
+int rear, front;
+int ch;
+int q[size];
+
+int rear = -1;
+int front = -1;
+void Insert_queue();
+void Delete_queue();
+void Display_queue();
+
+
+/* Function to create queue */
+
+void Insert_queue()
+{
+	if ((front == 0) && (rear == size-1))
+	{
+		printf("\n Overflow");
+		rear = 1;
+		return;
+	}
+	else
+		if (front < 0) /* Insert first element */
+		{
+			front = 0;
+			rear = 0;
+			printf("\nInput the element :");
+			scanf("%d", &ch);
+			q[rear] = ch ;
+		}
+		else
+			if (rear == size-1)
+			{
+				rear = 0;
+				printf("\n Input the element :");
+				scanf("%d", &ch);
+				q[rear] = ch ;
+			}
+
+			else
+			{
+				rear ++;
+				printf("\n Input the element :");
+				scanf("%d", &ch);
+				q[rear] = ch ;
+			}
+}
+
+/* Function to perform delete operation */
+
+void Delete_queue()
+{
+	if (front < 0)
+	{
+		printf("\nUnderflow");
+		return ;
+	}
+	ch = q[front];
+	q[front] = NULL;
+	printf("\n Element deleted :", ch);
+	if(front == rear)
+	{
+		front = -1;
+		rear = -1;
+	}
+	else
+		if ( front == size-1)
+		{
+			front = 0;
+		}
+		else
+		{
+			front++ ;
+		}
+
+}
+
+/* Output function */
+
+void Display_queue()
+{
+	int i;
+	if (front < 0)
+		return;
+	if ( rear >= front)
+	{
+		for(i = front; i <= rear; i++)
+		{
+			printf("\n i = %d", i);
+			printf(" %d ", q[i]);
+		}
+	}
+	else
+	{
+		for(i = front; i < size; i++)
+		{
+			printf("\n i = %d", i);
+			printf(" %d", q[i]);
+		}
+		for(i = 0; i <= rear; i++)
+		{
+			printf("\n i = %d", i);
+			printf(" %d ", q[i]);
+		}
+	}
+}
+
+/* Function main  */
+
+void main()
+{
+	int k = 0;
+	char choice;
+
+	do
+	{
+		printf("\nInsert->i Delete->d Quit->q:");
+		printf("\nInput the choice : ");
+		do
+		{
+			choice = getchar();
+			choice = tolower(choice);
+		}while(strchr("idq",choice)==NULL);
+		printf("Your choice is: %c",choice);
+
+		switch(choice)
+		{
+		case 'i' :
+			Insert_queue();
+			printf("\nQueue after inserting ");
+			Display_queue();
+			break;
+
+		case 'd' : 
+			Delete_queue();
+			printf("\nQueue content after deleteion is as follows:\n");
+			Display_queue();
+			break;
+
+		case 'q': 
+			k = 1;
+		}
+	} while(!k);
+}
+
+8. Make a program that demonstrates the working of simple list for inserting elements at beginning position, middle position and at the end of list. 
+/* INSERT A NODE INTO A SIMPLE LINKED LIST */
+/* LINK_IN.C */
+
+# include <stdio.h>
+# include <malloc.h>
+
+struct link
+{
+	int info;
+	struct link *next;
+};
+
+int i;
+int number;
+struct link start, *previous, *new1;
+
+void insertion(struct link *);
+void create_list(struct link *);
+void display(struct link *);
+
+/* Function create a linked list */
+
+void create_list(struct link *node)
+{
+	char ch;
+	start.next = NULL;  /* Empty list */
+
+	node = &start;      /* Point to the start of the list */
+	i = 0;
+	printf("\n Input choice n for break: ");
+	ch = getchar();
+	while(ch != 'n')
+	{
+		node->next = (struct link* ) malloc(sizeof(struct link));
+		node = node->next;
+		printf("\n Input the node: %d: ", (i+1));
+		scanf("%d", &node->info);
+		node->next = NULL;
+		fflush(stdin);
+		printf("\n Input choice n for break: ");
+		ch = getchar();
+		i++;
+	}
+	printf("\n Total nodes = %d", i);
+}
+
+/* Inserting a node */
+
+void insertion(struct link *node)
+{
+	int node_number = 0;
+	int insert_node;
+	node = start.next;
+	previous = &start;
+
+	printf("\n Input node number you want to insert:");
+	printf("\n Value should be less are equalto the");
+	printf("\n number of nodes in the list: ");
+	scanf("%d", &insert_node);
+
+	while(node)
+	{
+		if((node_number+1) == insert_node)
+		{
+			new1 = (struct link* ) malloc(sizeof(struct link));
+			new1->next = node ;
+			previous->next = new1;
+			printf("\n Input the node value: ");
+			scanf("%d", &new1->info);
+			break ;
+		}
+		else
+		{
+			node = node->next;
+			previous= previous->next;
+		}
+		node_number ++;
+	}
+}
+
+/* Display the list */
+
+void display(struct link *node)
+{
+	node = start.next;
+
+	while (node)
+	{
+		printf("\n 0x%x", node);
+		printf(" %d", node->info);
+		node = node->next;
+	}
+}
+/* Function main */
+
+void main()
+{
+	struct link *node = (struct link *) malloc(sizeof(struct link));
+
+	create_list(node);
+
+	printf("\n Created list is as follows:\n");
+	display(node);
+
+	insertion(node);
+
+	printf("\n After Inserting a node list is as follows:\n");
+	display(node);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9. Make a program that demonstrates the working of circular list for inserting elements at beginning position, middle position and at the end of list. 
+#include <stdio.h>
+#include <stdlib.h>
+
+
+/*
+ * Basic structure of Node
+ */
+struct node {
+    int data;
+    struct node * next;
+}*head;
+
+
+
+/*
+ * Functions used in this program
+ */
+void createList(int n);
+void displayList();
+void insertAtBeginning(int data);
+void insertAtN(int data, int position);
+
+
+int main()
+{
+    int n, data, choice=1;
+
+    head = NULL;
+
+    /*
+     * Runs forever until user chooses 0
+     */
+    while(choice != 0)
+    {
+        printf("============================================\n");
+        printf("CIRCULAR LINKED LIST PROGRAM\n");
+        printf("============================================\n");
+        printf("1. Create List\n");
+        printf("2. Display list\n");
+        printf("3. Insert at beginning\n");
+        printf("4. Insert at any position\n");
+        printf("0. Exit\n");
+        printf("--------------------------------------------\n");
+        printf("Enter your choice : ");
+
+        scanf("%d", &choice);
+
+        switch(choice)
+        {
+            case 1:
+                printf("Enter the total number of nodes in list: ");
+                scanf("%d", &n);
+                createList(n);
+                break;
+            case 2:
+                displayList();
+                break;
+            case 3:
+                printf("Enter data to be inserted at beginning: ");
+                scanf("%d", &data);
+                insertAtBeginning(data);
+                break;
+            case 4:
+                printf("Enter node position: ");
+                scanf("%d", &n);
+                printf("Enter data you want to insert at %d position: ", n);
+                scanf("%d", &data);
+                insertAtN(data, n);
+                break;
+            case 0:
+                break;
+            default:
+                printf("Error! Invalid choice. Please choose between 0-4");
+        }
+
+        printf("\n\n\n\n\n");
+    }
+
+    return 0;
+}
+
+
+
+/**
+ * Creates a circular linked list of n nodes.
+ * @n Number of nodes to be created
+ */
+void createList(int n)
+{
+    int i, data;
+    struct node *prevNode, *newNode;
+
+    if(n >= 1)
+    {
+        /*
+         * Creates and links the head node
+         */
+        head = (struct node *)malloc(sizeof(struct node));
+
+        printf("Enter data of 1 node: ");
+        scanf("%d", &data);
+
+        head->data = data;
+        head->next = NULL;
+
+        prevNode = head;
+
+        /*
+         * Creates and links rest of the n-1 nodes
+         */
+        for(i=2; i<=n; i++)
+        {
+            newNode = (struct node *)malloc(sizeof(struct node));
+
+            printf("Enter data of %d node: ", i);
+            scanf("%d", &data);
+
+            newNode->data = data;
+            newNode->next = NULL;
+
+            //Links the previous node with newly created node
+            prevNode->next = newNode;
+            //Moves the previous node ahead
+            prevNode = newNode;
+        }
+
+        //Links the last node with first node
+        prevNode->next = head;
+
+        printf("\nCIRCULAR LINKED LIST CREATED SUCCESSFULLY\n");
+    }
+}
+
+
+
+/**
+ * Displays the content of the list
+ */
+void displayList()
+{
+    struct node *current;
+    int n = 1;
+
+    if(head == NULL)
+    {
+        printf("List is empty.\n");
+    }
+    else
+    {
+        current = head;
+        printf("DATA IN THE LIST:\n");
+
+        do {
+            printf("Data %d = %d\n", n, current->data);
+
+            current = current->next;
+            n++;
+        }while(current != head);
+    }
+}
+
+
+
+/**
+ * Inserts a new node at the beginning of the list
+ * @data Data of the first node
+ */
+void insertAtBeginning(int data)
+{
+    struct node *newNode, *current;
+
+    if(head == NULL)
+    {
+        printf("List is empty.\n");
+    }
+    else
+    {
+        /*
+         * Creates new node, assign data and links it to head
+         */
+        newNode = (struct node *)malloc(sizeof(struct node));
+        newNode->data = data;
+        newNode->next = head;
+
+        /*
+         * Traverses to last node and links last node
+         * with first node which is new node
+         */
+        current = head;
+        while(current->next != head)
+        {
+            current = current->next;
+        }
+        current->next = newNode;
+
+        /*Makes new node as head node*/
+        head = newNode;
+
+        printf("NODE INSERTED SUCCESSFULLY\n");
+    }
+}
+
+
+
+/**
+ * Inserts a new node at any position in the list
+ * @data Data of the new node
+ * @position Position where to insert new node
+ */
+void insertAtN(int data, int position)
+{
+    struct node *newNode, *current;
+    int i;
+
+    if(head == NULL)
+    {
+        printf("List is empty.\n");
+    }
+    else if(position == 1)
+    {
+        insertAtBeginning(data);
+    }
+    else
+    {
+        /*
+         * Creates new node and assign data to it
+         */
+        newNode = (struct node *)malloc(sizeof(struct node));
+        newNode->data = data;
+
+        /*
+         * Traverse to n-1 node
+         */
+        current = head;
+        for(i=2; i<=position-1; i++)
+        {
+            current = current->next;
+        }
+
+        /* Links new node with node ahead of it and previous to it*/
+        newNode->next = current->next;
+        current->next = newNode;
+
+        printf("NODE INSERTED SUCCESSFULLY.\n");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+10. Write a program for insertion sorting. 
+/* insert sort */
+/* Insertion.C */
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef int T;          /* type of item to be sorted */
+typedef int tblIndex;   /* type of subscript */
+
+#define compGT(a,b) (a > b)
+
+void insertSort(T *a, tblIndex lb, tblIndex ub) {
+    T t;
+    tblIndex i, j;
+
+   /**************************
+    *  sort array a[lb..ub]  *
+    **************************/
+    for (i = lb + 1; i <= ub; i++) {
+        t = a[i];
+
+        /* Shift elements down until */
+        /* insertion point found.    */
+        for (j = i-1; j >= lb && compGT(a[j], t); j--)
+            a[j+1] = a[j];
+
+        /* insert */
+        a[j+1] = t;
+    }
+}
+
+void fill(T *a, tblIndex lb, tblIndex ub) {
+    tblIndex i;
+    srand(1);
+    for (i = lb; i <= ub; i++) a[i] = rand();
+}
+
+int main(int argc, char *argv[]) {
+    tblIndex maxnum, lb, ub;
+    T *a;
+    maxnum = atoi(argv[1]);
+    lb = 0; ub = maxnum - 1;
+    if ((a = malloc(maxnum * sizeof(T))) == 0) {
+        fprintf (stderr, "insufficient memory (a)\n");
+        exit(1);
+    }
+
+    fill(a, lb, ub);
+    insertSort(a, lb, ub);
+
+    return 0;
+}
+11. Write a program for bubble sorting. 
+/* bubble.c */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void bubble_sort(int array[], int size)
+{
+	int temp, i, j;
+
+	for (i = 0; i < size; i++)
+		for (j = 0; j < size; j++)
+			if (array[i] < array[j])
+			{
+				temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+}
+
+void main(void)
+{
+	int values[30], i;
+	printf("\n Unsorted list is as follows\n");
+
+	for (i = 0; i < 10; i++)
+	{
+		values[i] = rand() % 100;
+		printf(" %d", rand()%100);
+	}
+	bubble_sort(values, 10);
+	printf("\n Sorted list is as follows\n");
+
+	for (i = 0; i < 10; i++)
+		printf("%d ", values[i]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12. Write a program for quick sort. 
+/* quick.c */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void quick_sort(int array[], int first, int last)
+{
+	int temp, low, high, list_separator;
+
+	low = first;
+	high = last;
+	list_separator = array[(first + last) / 2];
+
+	do {
+		while (array[low] < list_separator)
+			low++;
+
+		while (array[high] > list_separator)
+			high--;
+
+		if (low <= high)
+		{
+			temp = array[low];
+			array[low++] = array[high];
+			array[high--] = temp;
+		}
+	} while (low <= high);
+
+	if (first < high)
+		quick_sort(array, first, high);
+	if (low < last)
+		quick_sort(array, low, last);
+}
+
+void main(void)
+{
+	int values[100], i;
+	printf("\n Unsorted list is as follows \n");
+
+	for (i = 0; i < 20; i++)
+	{
+		values[i] = rand() % 100;
+		printf(" %d", rand() %100);
+	}
+	quick_sort(values, 0, 19);
+
+	printf("\n Sorted list as follows\n");
+
+	for (i = 0; i < 20; i++)
+		printf("%d ", values[i]);
+}
+13. Write a program for merge sort. 
+/* MERGE SORT */
+/* merge.c */
+
+# include<stdio.h> 
+# include<stdlib.h>
+
+void merge_sort(float *, int , int , int );
+void merge_pass(float *, int , int );
+
+/* Definition of the function */
+
+void merge_sort(float l[], int top, int size, int bottom)
+{
+	float temp[1000];
+	int f = top;
+	int s = size +1 ;
+	int t = top ;
+	int upper;
+	while(( f <= size)&&(s <=bottom))
+	{  
+		if(l[f] <= l[s])
+		{
+			temp[t] = l[f] ;
+			f ++;
+		}
+
+		else
+		{
+			temp[t] = l[s] ;
+			s ++;
+		}
+
+		t ++;
+	}
+
+	if(f <=size)
+	{
+		for(f = f ; f<=size; f++)
+		{
+			temp[t] = l[f];
+			t++;
+		}
+	}
+
+	else
+	{
+		for(s = s ; s<= bottom ; s++)
+		{
+			temp[t]=l[s];
+			t++;
+		}
+
+	}
+
+	for(upper = top; upper <= bottom ; upper++)
+	{
+		l[upper]=temp[upper];
+	}
+
+}
+
+/* Definition of the function */
+
+void merge_pass( float append[], int m, int n )
+{
+	if( m!= n)
+	{
+		int mid = (m+n)/2;
+		merge_pass( append, m, mid );
+
+		merge_pass( append, mid+1, n );
+		merge_sort( append, m, mid, n );
+	}
+}
+
+/* main function */
+
+void main()
+{
+	float list[1000];
+	int i, n = 30;
+	printf("\n Size of the list: %d", n);
+
+	for(i = 0 ; i < n ; i++)
+	{
+		list[i] = (float) (rand() %100);
+	}
+
+	printf("\n Entered list as follows:\n");
+	for( i = 0 ; i<n ; i++)
+		printf(" %d ", (int) list[i]);
+
+	i = 0 ;
+
+	merge_pass(list, i, n-1);
+
+	printf("\n Merge sorted list is as follows:\n");
+	for( i = 0 ; i<n ; i++)
+		printf(" %d", (int) list[i]);
+}
+
+
+
+14. Write a program for heap sort. 
+/* HEAP SORT */
+/* HEAP.C */
+
+# include<stdio.h>
+
+void  heap_sort(int *, int );
+void create_heap(int *, int);
+void display(int *, int);
+
+/*	 Definition of the function */
+
+void create_heap(int list[], int n )
+{
+
+	int k, j, i, temp;
+
+	for(k = 2 ; k <= n;  ++k)
+	{
+		i = k ;
+		temp = list[k];
+		j = i / 2 ;
+
+		while((i > 1) && (temp > list[j]))
+		{
+			list[i] = list[j];
+			i = j ;
+			j = i / 2 ;
+			if ( j < 1 )
+				j = 1 ;
+		}
+
+		list[i] = temp ;
+	}
+}
+
+/* End of heap creation function */
+
+/* Definition of the function */
+
+void heap_sort(int list[], int n)
+{
+	int k, temp, value, j, i, p;
+	int step = 1;
+	for(k = n ; k >= 2; --k)
+	{
+		temp = list[1] ;
+		list[1] = list[k];
+		list[k] = temp ;
+
+		i = 1 ;
+		value = list[1];
+		j = 2 ;
+
+		if((j+1) < k)
+			if(list[j+1] > list[j])
+				j ++;
+		while((j <= ( k-1)) && (list[j] > value))
+		{
+			list[i] = list[j];
+			i = j ;
+			j = 2*i ;
+			if((j+1) < k)
+				if(list[j+1] > list[j])
+					j++;
+				else
+					if( j > n)
+						j = n ;
+			list[i] = value;
+		} /* end of while statement */
+		
+		printf("\n Step = %d ", step);
+		step++;	
+		for(p = 1; p <= n; p++)
+			printf(" %d", list[p]);
+	} /* end for loop */
+}
+
+/* Display function */
+
+void display(int list[], int n)
+{
+	int i;
+	for(i = 1 ; i <= n; ++ i)
+	{
+		printf("  %d", list[i]);
+	}
+}
+
+/* Function main */
+
+void main()
+{
+	int list[100];
+	int i, size = 13 ;
+
+	printf("\n Size of the list: %d", size);
+
+	for(i = 1 ; i <= size ; ++i)
+	{
+		list[i] = rand() % 100;
+	}
+	printf("\n Entered list is as follows:\n");
+	display(list, size);
+	create_heap(list, size);
+	printf("\n Heap\n");
+	display(list, size);
+	printf("\n\n");
+
+	heap_sort(list,size);
+
+	printf("\n\n Sorted list is as follows :\n\n");
+	display(list,size);
+
+}
+
+
+
