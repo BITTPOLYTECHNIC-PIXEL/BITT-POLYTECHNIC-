@@ -1,0 +1,756 @@
+  
+                                            EXPERIMENT NO 1
+
+AIM: Demonstrate giving brief history of Operating System, types of Operating Systems in use these days, how it is necessary for a computer functioning. 
+Operating systems (OS) provide a set of functions needed and used by most application programs on a computer, and the links needed to control and synchronize computer hardware. On the first computers, with no operating system, every program needed the full hardware specification to run correctly and perform standard tasks, and its own drivers for peripheral devices like printers and punched paper card readers. The growing complexity of hardware and application programs eventually made operating systems a necessity for everyday use.
+
+History of Operating System
+First generation (1945-1955)- vacuum tubes, plug boards
+Second generation(1955-1965)- transistors,batch systems
+Third generation(1965-1980)- ICs and multiprogramming
+Fourth generation(1980-present)- personal computers and 
+Workstations (Network operating system and distributed operating systems)
+
+Unix and Unix-like operating systems
+
+Evolution of Unix systems
+•	Unix was originally written in assembly language. Ken Thompson wrote B, mainly based on BCPL, based on his experience in the MULTICS project. B was replaced by C, and Unix, rewritten in C, developed into a large, complex family of inter-related operating systems which have been influential in every modern operating system.
+
+•	The Unix-like family is a diverse group of operating systems, with several major sub-categories including System V, BSD, and Linux. The name "UNIX" is a trademark of The Open Group which licenses it for use with any operating system that has been shown to conform to their definitions. "UNIX-like" is commonly used to refer to the large set of operating systems which resemble the original UNIX.
+
+•	Unix-like systems run on a wide variety of computer architectures. They are used heavily for servers in business, as well as workstations in academic and engineering environments. Free UNIX variants, such as Linux and BSD, are popular in these areas.
+
+                  Macos
+MacOS (formerly "Mac OS X" and later "OS X") is a line of open core graphical operating systems developed, marketed, and sold by Apple Inc., the latest of which is pre-loaded on all currently shipping Macintosh computers. MacOS is the successor to the original classic Mac OS, which had been Apple's primary operating system since 1984. Unlike its predecessor, MacOS is a UNIX operating system built on technology that had been developed at next through the second half of the 1980s and up until Apple purchased the company in early 1997. ".
+
+ 
+Linux
+
+•	Ubuntu, desktop Linux distribution
+The Linux kernel originated in 1991, as a project of Linus Torvalds, while a university student in Finland. He posted information about his project on a newsgroup for computer students and programmers, and received support and assistance from volunteers who succeeded in creating a complete and functional kernel.
+
+•	Linux is Unix-like, but was developed without any Unix code, unlike BSD and its variants. Because of its open license model, the Linux kernel code is available for study and modification, which resulted in its use on a wide range of computing machinery from supercomputers to smart-watches. Although estimates suggest that Linux is used on only 1.82% of all "desktop" (or laptop) PCs, it has been widely adopted for use in servers and embedded systems such as cell phones.
+
+•	Microsoft Windows
+Microsoft Windows is a family of proprietary operating systems designed by Microsoft Corporation and primarily targeted to Intel architecture based computers, with an estimated 88.9% total usage share on Web connected computers. The latest version is Windows 10.
+                     In 2011, Windows 7 overtook Windows XP as most common version in use.
+
+Microsoft Windows was first released in 1985, as an operating environment running on top of MS-DOS, which was the standard operating system shipped on most Intel architecture personal computers at the time. In 1995, Windows 95 was released which only used MS-DOS as a bootstrap. 
+
+Types of Operating Systems Single- and multi-tasking:
+A single-tasking system can only run one program at a time, while a multi-tasking operating system allows more than one program to be running in concurrency. This is achieved by time- sharing, dividing the available processor time between multiple processes that are each interrupted repeatedly in time slices by a task-scheduling subsystem of the operating system..
+Single- and multi-user:
+Single-user operating systems have no facilities to distinguish users, but may allow multiple programs to run in tandem. A multi-user operating system extends the basic concept of multi- tasking with facilities that identify processes and resources, such as disk space, belonging to multiple users, and the system permits multiple users to interact with the system at the same time. 
+Distributed:
+A distributed operating system manages a group of distinct computers and makes them appear to be a single computer. The development of networked computers that could be linked and communicate with each other gave rise to distributed computing. Distributed computations are carried out on more than one machine. When computers in a group work in cooperation, they form a distributed system.
+Embedded:
+Embedded operating systems are designed to be used in embedded computer systems. They are designed to operate on small machines like PDAs with less autonomy. They are able to operate with a limited number of resources. They are very compact and extremely efficient by design. Windows CE and Minix 3 are some examples of embedded operating systems.
+
+
+
+
+                   Real-time:
+
+A real-time operating system is an operating system that guarantees to process events or data by a specific moment in time. A real-time operating system may be single- or multi-tasking, but when multitasking, it uses specialized scheduling algorithms so that a deterministic nature of behavior is achieved. An event-driven system switches between tasks based on their priorities or external events while time-sharing operating systems switch tasks based on clock interrupts.
+
+Need of Operating System:
+In earlier day’s user had to design the application according to the internal structure of the hardware. Operating System was needed to enable the user to design the application without concerning the details of the computer’s internal structure. In general the boundary between the hardware & software is transparent to the user.
+
+Usage of Operating System:
+1.	Easy interaction between the human & computer.
+2.	Starting computer operation automatically when power in turned on.
+3.	Loading & scheduling users program.
+4.	Controlling input & output.
+5.	Controlling program execution.
+6.	Managing use of main memory.
+7.	Providing security to users program.
+
+                 Functions of Operating System :
+The main functions perform by most Operating System of today are as follow: -
+•	Process Management: - The process management module of an Operating System takes care of the creation & deletion of processes, scheduling of various system resources to the different process requesting them, & providing mechanism for synchronization & communication among processes.
+•	Memory Management: - The memory management module of an Operating System takes care of the allocation & reallocation of memory space to the various program in need of this resource.
+•	File Management: - computer use a lot of data & programs, which are, stored on secondary storage devices. File management functions of an Operating System. Involves keeping track of all different files & maintaining the integrity of data stored in the files including file directory structure.
+•	Security: - The security modules of an Operating System protect the resources & information of a computer system against destruction& unauthorized access.
+•	Command Interpretation: -The Command Interpretation module of an Operating System takes care of interpreting of user commands, & directing the system resources to handle the requests. With this mode of interaction with the system, the user is usually not too concerned with the hardware details of the system.
+•	Input/Output or Device Management: - coordination & control of various input & output devices is an important function of the Operating System. This involves receiving the request for I/O interrupts, & communicating back to the requesting process.
+
+
+
+
+             
+
+
+ 
+
+ 
+
+
+ 
+                                                     EXPERIMENT NO 2
+AIM: Prepare a report on different views of the Operating System, the journey of a command execution, Design and implementation of Operating System.  
+Operating System is designed both by taking user view and system view into consideration.
+•	User View
+The goal of the Operating System is to maximize the work and minimize the effort of the user. Most of the systems are designed to be operated by single user, however in some systems multiple users can share resources, memory. In these cases Operating System is designed to handle available resources among multiple users and CPU efficiently.
+Operating System must be designed by taking both usability and efficient resource utilization into view.
+In embedded systems (Automated systems) user view is not present.
+Operating System gives an effect to the user as if the processor is dealing only with the current task, but in background processor is dealing with several processes.
+•	System View
+From the system point of view Operating System is a program involved with the hardware. Operating System is allocator, which allocate memory, resources among various processes.
+o	It controls the sharing of resources among programs.
+o	It prevents improper usage, error and handle deadlock conditions.
+o	It is a program that runs all the time in the system in the form of Kernel.
+o	It controls application programs that are not part of Kernel.
+
+A command-line user interface (CLI), also known as a console user interface, and character user interface (CUI), is a means of interacting with a computer program where the user (or client) issues commands to the program in the form of successive lines of text (command lines). A program which handles the interface is called a command language interpreter or shell.
+
+                        Advantages
+
+                       Disadvantages
+•	Requires help guide for commands
+•	Commands can foster complex options
+•	Not visually rich, results might scroll off-screen
+•	Beginner-unfriendly
+ 
+
+
+                 Design Goals
+
+
+
+                   Implementation
+
+
+
+
+
+ 
+                                                     EXPERIMENT NO 3
+AIM: Prepare a report on memory management of Operating System.
+Memory management is the functionality of an operating system which handles or manages primary memory and moves processes back and forth between main memory and disk during execution. Memory management keeps track of each and every memory location, regardless of either it is allocated to some process or it is free. It checks how much memory is to be allocated to processes. It decides which process will get memory at what time. It tracks whenever some memory gets freed or unallocated and correspondingly it updates the status.
+Process Address Space
+The process address space is the set of logical addresses that a process references in its code. For example, when 32-bit addressing is in use, addresses can range from 0 to 0x7fffffff; that is, 2^31 possible numbers, for a total theoretical size of 2 gigabytes.
+
+The operating system takes care of mapping the logical addresses to physical addresses at the time of memory allocation to the program. There are three types of addresses used in a program before and after memory is allocated −
+
+S.N.	Memory Addresses & Description
+1	
+Symbolic addresses
+
+The addresses used in a source code. The variable names, constants, and instruction labels are the basic elements of the symbolic address space.
+2	
+Relative addresses
+
+At the time of compilation, a compiler converts symbolic addresses into relative addresses.
+3	
+Physical addresses
+
+The loader generates these addresses at the time when a program is loaded into main memory.
+Virtual and physical addresses are the same in compile-time and load-time address-binding schemes. Virtual and physical addresses differ in execution-time address-binding scheme.
+
+The set of all logical addresses generated by a program is referred to as a logical address space. The  set  of  all  physical  addresses  corresponding  to  these  logical  addresses  is  referred  to  as  a physical address space.
+
+The runtime mapping from virtual to physical address is done by the memory management unit (MMU) which is a hardware device. MMU uses following mechanism to convert virtual address to physical address.
+ 
+•	The value in the base register is added to every address generated by a user process, which is treated as offset at the time it is sent to memory. For example, if the base register value is 10000, then an attempt by the user to use address location 100 will be dynamically reallocated to location 10100.
+
+•	The user program deals with virtual addresses; it never sees the real physical addresses.
+
+Static vs Dynamic Loading
+The choice between Static or Dynamic Loading is to be made at the time of computer program being developed. If you have to load your program statically, then at the time of compilation, the complete programs will be compiled and linked without leaving any external program or module dependency. The linker combines the object program with other necessary object modules into an absolute program, which also includes logical addresses.
+
+If you are writing a Dynamically loaded program, then your compiler will compile the program and for all the modules which you want to include dynamically, only references will be provided and rest of the work will be done at the time of execution.
+
+At the time of loading, with static loading, the absolute program (and data) is loaded into memory in order for execution to start.
+
+If you are using dynamic loading, dynamic routines of the library are stored on a disk in relocatable form and are loaded into memory only when they are needed by the program.
+Static vs Dynamic Linking
+As explained above, when static linking is used, the linker combines all other modules needed by a program into a single executable program to avoid any runtime dependency.
+
+When dynamic linking is used, it is not required to link the actual module or library with the program, rather a reference to the dynamic module is provided at the time of compilation and linking. Dynamic Link Libraries (DLL) in Windows and Shared Objects in Unix are good examples of dynamic libraries.
+Swapping
+Swapping is a mechanism in which a process can be swapped temporarily out of main memory (or move) to secondary storage (disk) and make that memory available to other processes. At some later time, the system swaps back the process from the secondary storage to main memory.
+
+Though performance is usually affected by swapping process but it helps in running multiple and big processes in parallel and that's the reason Swapping is also known as a technique for memory compaction.
+ 
+ 
+The total time taken by swapping process includes the time it takes to move the entire process to a secondary disk and then to copy the process back to memory, as well as the time the process takes to regain main memory.
+
+	Memory Allocation
+Main memory usually has two partitions −
+
+•	Low Memory − Operating system resides in this memory.
+
+•	High Memory − User processes are held in high memory.
+
+Operating system uses the following memory allocation mechanism.
+
+
+ 
+
+S.N.	Memory Allocation & Description
+1	
+Single-partition allocation
+
+In this type of allocation, relocation-register scheme is used to protect user processes from each other, and from changing operating-system code and data. Relocation register contains value of smallest physical address whereas limit register contains range of logical addresses. Each logical address must be less than the limit register.
+2	
+Multiple-partition allocation
+
+In this type of allocation, main memory is divided into a number of fixed-sized partitions where each partition should contain only one process. When a partition is free, a process is selected from the input queue and is loaded into the free partition. When the process terminates, the partition becomes available for another process.
+
+Fragmentation
+As processes are loaded and removed from memory, the free memory space is broken into little pieces. It happens after sometimes that processes cannot be allocated to memory blocks considering their small size and memory blocks remains unused. This problem is known as Fragmentation.
+                Fragmentation is of two types −
+
+S.N.	Fragmentation & Description
+1	
+External fragmentation
+
+Total memory space is enough to satisfy a request or to reside a process in it, but it is not contiguous, so it cannot be used.
+
+	
+2	
+Internal fragmentation
+
+Memory block assigned to process is bigger. Some portion of memory is left unused, as it cannot be used by another process.
+
+
+ 
+The following diagram shows how fragmentation can cause waste of memory and a compaction technique can be used to create more free memory out of fragmented memory −
+
+External fragmentation can be reduced by compaction or shuffle memory contents to place all free memory together in one large block. To make compaction feasible, relocation should be dynamic.
+
+The internal fragmentation can be reduced by effectively assigning the smallest partition but large enough for the process.
+
+
+Paging
+A computer can address more memory than the amount physically installed on the system. This extra memory is actually called virtual memory and it is a section of a hard that's set up to emulate the computer's RAM. Paging technique plays an important role in implementing virtual memory.
+
+Paging is a memory management technique in which process address space is broken into blocks of the same size called pages (size is power of 2, between 512 bytes and 8192 bytes). The size of the process is measured in the number of pages.
+
+Similarly,  main  memory  is  divided  into  small  fixed-sized  blocks  of  (physical)   memory called frames and the size of a frame is kept the same as that of a page to have optimum utilization of the main memory and to avoid external fragmentation.
+ 
+ 
+Address Translation
+Page address is called logical address and represented by page number and the offset.
+
+Frame address is called physical address and represented by a frame number and the offset.
+
+A data structure called page map table is used to keep track of the relation between a page of a process to a frame in physical memory.
+
+When the system allocates a frame to any page, it translates this logical address into a physical address and create entry into the page table to be used throughout execution of the program.
+When a process is to be executed, its corresponding pages are loaded into any available memory frames. Suppose you have a program of 8Kb but your memory can accommodate only 5Kb at a given point in time, then the paging concept will come into picture.
+ 
+ 
+When a computer runs out of RAM, the operating system (OS) will move idle or unwanted pages of memory to secondary memory to free up RAM for other processes and brings them back when needed by the program.
+
+This process continues during the whole execution of the program where the OS keeps removing idle pages from the main memory and write them onto the secondary memory and bring them back when required by the program.
+Advantages and Disadvantages of Paging
+Here is a list of advantages and disadvantages of paging −
+
+•	Paging reduces external fragmentation, but still suffer from internal fragmentation.
+
+•	Paging is simple to implement and assumed as an efficient memory management technique.
+
+•	Due to equal size of the pages and frames, swapping becomes very easy.
+
+•	Page table requires extra memory space, so may not be good for a system having small RAM.
+
+Segmentation
+Segmentation is a memory management technique in which each job is divided into several segments of different sizes, one for each module that contains pieces that perform related functions. Each segment is actually a different logical address space of the program.
+
+When a process is to be executed, its corresponding segmentation are loaded into non-contiguous memory though every segment is loaded into a contiguous block of available memory.
+ 
+Segmentation memory management works very similar to paging but here segments are of variable- length where as in paging pages are of fixed size.
+
+A program segment contains the program's main function, utility functions, data structures, and so on. The operating system maintains a segment map table for every process and a list of free memory blocks along with segment numbers, their size and corresponding memory locations in main memory. For each segment, the table stores the starting address of the segment and the length of the segment. A reference to a memory location includes a value that identifies a segment and an offset.
+
+
+
+
+
+
+
+ 
+                                                       EXPERIMENT NO 4
+AIM:Prepare a report on file management of Operating System.
+A file management system is a type of software that manages data files in a computer system. It has limited capabilities and is designed to manage individual or group files, such as special office documents and records. It may display report details, like owner, creation date, state of completion and similar features useful in an office environment. A file management system is also known as a file manager.
+File Management System
+A file management system should not be confused with a file system, which manages all types of data and files in an operating system (OS), or a database management system (DBMS), which has relational database capabilities and includes a programming language for further data manipulation.
+A file management system's tracking component is key to the creation and management of this system, where documents containing various stages of processing are shared and interchanged on an ongoing basis.
+The system may contain features like:
+o	Assigning queued document numbers for processing
+o	Owner and process mapping to track various stages of processing
+o	Report generation
+o	Notes
+o	Status
+o	Create, modify, copy, delete and other file operations
+o	File Structure
+o	A File Structure should be according to a required format that the operating system can understand.
+o	A file has a certain defined structure according to its type.
+o	A text file is a sequence of characters organized into lines.
+o	A source file is a sequence of procedures and functions.
+o	An object file is a sequence of bytes organized into blocks that are understandable by the machine.
+
+
+ 
+File Type
+File type refers to the ability of the operating system to distinguish different types of file such as text files source files and binary files etc. Many operating systems support many types of files.
+Operating system like MS-DOS and UNIX have the following types of files −
+o	Ordinary files
+o	These are the files that contain user information.
+o	These may have text, databases or executable program.
+o	The user can apply various operations on such files like add, modify, delete or even remove the entire file.
+Directory files- These files contain list of file names and other information related to these files.
+Special files- These files are also known as device files. These files represent physical device like disks, terminals, printers, networks, tape drive etc.
+These files are of two types −
+
+o	Character special files − data is handled character by character as in case of terminals or printers.
+
+o	Block special files − data is handled in blocks as in the case of disks and tapes.
+
+File Access Mechanisms
+File access mechanism refers to the manner in which the records of a file may be accessed. There are several ways to access files −
+o	Sequential access
+o	Direct/Random access
+o	Indexed sequential access
+o	Sequential access
+A sequential access is that in which the records are accessed in some sequence, i.e., the information in the file is processed in order, one record after the other. This access method is the most primitive one. Example: Compilers usually access files in this fashion.
+
+Direct/Random access
+o	Random access file organization provides, accessing the records directly.
+o	Each record has its own address on the file with by the help of which it can be directly accessed for reading or writing.
+o	The records need not be in any sequence within the file and they need not be in adjacent locations on the storage medium.
+
+Indexed sequential access
+o	This mechanism is built up on base of sequential access.
+o	An index is created for each file which contains pointers to various blocks.
+o	Index is searched sequentially and its pointer is used to access the file directly.
+
+Space Allocation
+Files are allocated disk spaces by operating system. Operating systems deploy following three main ways to allocate disk space to files.
+o	Contiguous Allocation
+o	Linked Allocation
+o	Indexed Allocation
+
+ 
+
+ 
+
+ 
+Indexed Allocation
+o	Provides solutions to problems of contiguous and linked allocation.
+o	A index block is created having all pointers to files.
+o	Each file has its own index block which stores the addresses of disk space occupied by the file.
+o	Directory contains the addresses of index blocks of files.
+ 
+ 
+                                                       EXPERIMENT NO 5
+AIM: Demonstrate the Security and Protection features of an Operating System. 
+Security refers to providing a protection system to computer system resources such as CPU, memory, disk, software programs and most importantly data/information stored in the computer system. If a computer program is run by an unauthorized user, then he/she may cause severe damage to computer or data stored in it. So a computer system must be protected against unauthorized access, malicious access to system memory, viruses, worms etc. We're going to discuss following topics in this chapter.
+
+•	Authentication
+•	One Time passwords
+•	Program Threats
+•	System Threats
+•	Computer Security Classifications
+Authentication
+Authentication refers to identifying each user of the system and associating the executing programs with those users. It is the responsibility of the Operating System to create a protection system which ensures that a user who is running a particular program is authentic. Operating Systems generally identifies/authenticates users using following three ways −
+
+•	Username / Password − User need to enter a registered username and password with Operating system to login into the system.
+
+•	User card/key − User need to punch card in card slot, or enter key generated by key generator in option provided by operating system to login into the system.
+
+•	User attribute - fingerprint/ eye retina pattern/ signature − User need to pass his/her attribute via designated input device used by operating system to login into the system.
+
+One Time passwords
+One-time passwords provide additional security along with normal authentication. In One-Time Password system, a unique password is required every time user tries to login into the system. Once a one-time password is used, then it cannot be used again. One-time password are implemented in various ways.
+
+•	Random numbers − Users are provided cards having numbers printed along with corresponding alphabets. System asks for numbers corresponding to few alphabets randomly chosen.
+
+•	Secret key − User are provided a hardware device which can create a secret id mapped with user id. System asks for such secret id which is to be generated every time prior to login.
+ 
+•	Network password − Some commercial applications send one-time passwords to user on registered mobile/ email which is required to be entered prior to login.
+
+Program Threats
+Operating system's processes and kernel do the designated task as instructed. If a user program made these process do malicious tasks, then it is known as Program Threats. One of the common example of program threat is a program installed in a computer which can store and send user credentials via network to some hacker. Following is the list of some well-known program threats.
+
+•	Trojan Horse − Such program traps user login credentials and stores them to send to malicious user who can later on login to computer and can access system resources.
+
+•	Trap Door − If a program which is designed to work as required, have a security hole in its code and perform illegal action without knowledge of user then it is called to have a trap door.
+
+•	Logic Bomb − Logic bomb is a situation when a program misbehaves only when certain conditions met otherwise it works as a genuine program. It is harder to detect.
+
+•	Virus − Virus as name suggest can replicate themselves on computer system. They are highly dangerous and can modify/delete user files, crash systems. A virus is generatlly a small code embedded in a program. As user accesses the program, the virus starts getting embedded in other files/ programs and can make system unusable for user
+
+System Threats
+System threats refers to misuse of system services and network connections to put user in trouble. System threats can be used to launch program threats on a complete network called as program attack. System threats creates such an environment that operating system resources/ user files are misused. Following is the list of some well-known system threats.
+
+•	Worm − Worm is a process which can choked down a system performance by using system resources to extreme levels. A Worm process generates its multiple copies where each copy uses system resources, prevents all other processes to get required resources. Worms processes can even shut down an entire network.
+
+•	Port Scanning − Port scanning is a mechanism or means by which a hacker can detects system vulnerabilities to make an attack on the system.
+
+•	Denial of Service − Denial of service attacks normally prevents user to make legitimate use of the system. For example, a user may not be able to use internet if denial of service attacks browser's content settings.
+
+ 
+                                                              EXPERIMENT NO 6 
+                AIM: Demonstrate the functions of Multi Processor Systems.
+Multiprocessing is the use of two or more central processing units (CPUs) within a single computer system. The term also refers to the ability of a system to support more than one processor or the ability to allocate tasks between them. There are many variations on this basic theme, and the definition of multiprocessing can vary with context, mostly as a function of how CPUs are defined (multiple cores on one die, multiple dies in one package, multiple packages in one system unit, etc.).
+
+Multiprocessor Operating System refers to the use of two or more central processing units (CPU) within a single computer system. These multiple CPUs are in a close communication sharing the computer bus, memory and other peripheral devices. These systems are referred as tightly coupled systems.
+
+
+These types of systems are used when very high speed is required to process a large volume of data. These systems are generally used in environment like satellite control, weather forecasting etc. The basic organization of multiprocessing system is shown in fig.
+
+Multiprocessing System
+Multiprocessing system is based on the symmetric multiprocessing model, in which each processor runs an identical copy of operating system and these copies communicate with each other. In this system processor is assigned a specific task. A master processor controls the system. This scheme defines a master-slave relationship. These systems can save money in compare to single processor systems because the processors can share peripherals, power supplies and other devices. The main advantage of multiprocessor system is to get more work done in a shorter period of time. Moreover, multiprocessor systems prove more reliable in the situations of failure of one processor. In this situation, the system with multiprocessor will not halt the system; it will only slow it down.
+ 
+In order to employ multiprocessing operating system effectively, the computer system must have the followings:
+1.	Motherboard Support: A motherboard capable of handling multiple processors. This means additional sockets or slots for the extra chips and a chipset capable of handling the multiprocessing arrangement.
+
+2.	Processor Support: processors those are capable of being used in a multiprocessing system.
+The whole task of multiprocessing is managed by the operating system, which allocates different tasks to be performed by the various processors in the system.
+Applications designed for the use in multiprocessing are said to be threaded, which means that they are broken into smaller routines that can be run independently. This allows the operating system to let these threads run on more than one processor simultaneously, which is multiprocessing that results in improved performance.
+
+
+In a multiprocessor system, the dynamically sharing of resources among the various processors may cause therefore, a potential bottleneck. There are three main sources of contention that can be found in a multiprocessor operating system:
+
+Locking system: In order to provide safe access to the resources shared among multiple processors, they need to be protected by locking scheme. The purpose of a locking is to serialize accesses to the protected resource by multiple processors. Undisciplined use of locking can severely degrade the performance of system. This form of contention can be reduced by using locking scheme, avoiding long critical sections, replacing locks with lock-free algorithms, or, whenever possible, avoiding sharing altogether.
+
+Shared data: The continuous accesses to the shared data items by multiple processors (with one or more of them with data write) are serialized by the cache coherence protocol. Even in a moderate- scale system, serialization delays can have significant impact on the system performance. In addition, bursts of cache coherence traffic saturate the memory bus or the interconnection network, which also slows down the entire system. This form of contention can be eliminated by either avoiding sharing or, when this is not possible, by using replication techniques to reduce the rate of write accesses to the shared data.
+
+False sharing: This form of contention arises when unrelated data items used by different processors are located next to each other in the memory and, therefore, share a single cache line: The effect of false sharing is the same as that of regular sharing bouncing of the cache line among several processors. Fortunately, once it is identified, false sharing can be easily eliminated by setting the memory layout of non-shared data.
+
+Apart from eliminating bottlenecks in the system, a multiprocessor operating system developer should provide support for efficiently running user applications on the multiprocessor. Some of the aspects of such support include mechanisms for task placement and migration across processors, physical memory placement insuring most of the memory pages used by an application is located in the local memory, and scalable multiprocessor synchronization primitives.
+ 
+                                                         EXPERIMENT NO 7
+AIM: Demonstrate and produce report on computer network algorithms for distributed processing.
+A distributed algorithm is an algorithm designed to run on computer hardware constructed from interconnected processors. Distributed algorithms are  used  in  many  varied  application  areas  of distributed     computing,     such     as telecommunications, scientific      computing,  distributed information processing, and real-time process control. Standard problems solved by distributed    algorithms    include leader     election, consensus,     distributed search, spanning tree generation, mutual exclusion, and resource allocation.
+Distributed algorithms are a sub-type of parallel algorithm, typically executed concurrently, with separate parts of the algorithm being run simultaneously on independent processors, and having limited information about what the other parts of the algorithm are doing. One of the major challenges in developing and implementing distributed algorithms is successfully coordinating the behavior of the independent parts of the algorithm in the face of processor failures and unreliable communications links. The choice of an appropriate distributed algorithm to solve a given problem depends on both the characteristics of the problem, and characteristics of the system the algorithm will run on such as the type and probability of processor or link failures, the kind of inter-process communication that can be performed, and the level of timing synchronization between separate processes
+	 
+•	Communication in networks is implemented in a process on one machine communicating with a process on another machine
+•	See CS430 for details
+•	A distributed algorithm is an algorithm, run on a distributed system, that does not assume the previous existence of a central coordinator.
+•	A distributed system is a collection of processors that do not share memory or a clock. Each processor has its own memory, and the processors communicate via communication networks.
+ 
+•	We will consider two problems requiring distributed algorithms, the coordinator election problem and the value agreement problem (Byzantine generals problem)
+
+
+Election Algorithms
+•	The coordinator election problem is to choose a process from among a group of processes on different processors in a distributed system to act as the central coordinator.
+•	An election algorithm is an algorithm for solving the coordinator election problem. By the nature of the coordinator election problem, any election algorithm must be a distributed algorithm.
+-a group of processes on different machines need to choose a coordinator
+
+-peer to peer communication: every process can send messages to every other process.
+
+-Assume that processes have unique IDs, such that one is highest
+
+-Assume that the priority of process Pi is i
+
+(a)	Bully Algorithm
+Background: any process Pi sends a message to the current coordinator; if no response in T time units, Pi tries to elect itself as leader. Details follow:
+
+                 Algorithm for process Pi that detected the lack of coordinator
+
+Else if Pj sends “election” message (i > j)
+
+Pi sends a response to Pj saying it is alive Pi starts an election.
+=> choose highest process ID + send “Elected (x)” message to neighbor 
+   If a process receives “Elected(x)” message,
+Set coordinator to x;
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+                                                           EXPERIMENT NO 8
+AIM: Prepare a brief history of Windows Operating System.
+Microsoft Windows is a family of operating systems. We look at the history of Microsoft's Windows operating systems (Windows OS) from 1985 to present day.
+The Windows operating  systems  (Windows  OS)  are  more  formally  called Microsoft Windows and is a family of operating systems for personal computers. Windows dominates the personal computer  world,  running,  by  some  estimates,  more  than  90  percent  of  all personal computers – the remainder running Linux and Mac operating systems.
+Windows provides a graphical user interface (GUI), virtual memory management, multitasking, and support for many peripheral devices. In addition to Windows OS for personal computers, Microsoft also offers operating systems for servers and personal mobile devices.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Windows Operating Systems for PCs
+The following details the history of MS-DOS and Windows operating systems designed for personal computers (PCs).
+
+MS-DOS (Microsoft Disk Operating System)
+Originally developed by Microsoft for IBM, MS-DOS was the standard operating system for IBM- compatible personal computers. The initial versions of DOS were very simple and resembled another operating system called CP/M. Subsequent versions have become increasingly sophisticated as they incorporated features of minicomputer operating systems.
+ 
+Windows 1.0 – 2.0 (1985-1992)
+Introduced in 1985, Microsoft Windows 1.0 was named due to the computing boxes, or "windows" that  represented  a  fundamental  aspect   of   the   operating   system.   Instead   of   typing MS- DOS commands, windows 1.0 allowed users to point and click to access the windows.
+In 1987 Microsoft released Windows 2.0, which was designed for the designed for the Intel 286 processor. This version added desktop icons, keyboard shortcuts and improved graphics support.
+Windows 3.0 – 3.1 (1990–1994)
+Windows 3.0 was released in May, 1900 offering better icons, performance and advanced graphics with 16 colors designed for Intel 386 processors. This version is the first release that provides the standard "look and feel" of Microsoft Windows for many years to come. Windows 3.0 included Program Manager, File Manager and Print Manager and games (Hearts, Minesweeper and Solitaire). Microsoft released Windows 3.1 in 1992.
+Windows 95 (August 1995)
+
+
+
+
+
+
+
+
+
+
+
+
+Windows 95 was released in 1995 and was a major upgrade to the Windows operating system. This OS was a significant advancement over its precursor, Windows 3.1. In addition to sporting a new user interface, Windows 95 also includes a number of important internal improvements. Perhaps most important, it supports 32-bit applications, which means that applications written specifically for this operating system should run much faster.
+Although Windows 95 can run older Windows and DOS applications, it has essentially removed DOS as the underlying platform. This has meant removal of many of the old DOS limitations, such as 640K of main memory and 8-character filenames. Other important features in this operating system are the ability to automatically detect and configure installed hardware (plug and play).
+
+Windows 98 (June 1998)
+Windows 98 offers support for a number of new technologies, including FAT32, AGP, MMX, USB, DVD, and ACPI. Its most visible feature, though, is the Active Desktop, which integrates the Web browser (Internet Explorer) with the operating system. From the user's point of view, there is no difference between accessing a document residing locally on the user's hard disk or on a Web server halfway around the world.
+Windows ME - Millennium Edition (September 2000)
+The Windows Millennium Edition, called "Windows Me" was an update to the Windows 98 core and included some features of the Windows 2000 operating system. This version also removed the "boot in DOS" option.
+ 
+Windows NT 31. - 4.0 (1993-1996)
+A version of the Windows operating system. Windows NT (New Technology) is a 32-bit operating system that supports preemptive multitasking. There are actually two versions of Windows NT: Windows NT Server, designed to act as a server in networks, and Windows NT Workstation for stand-alone or client workstations.
+Windows 2000 (February 2000)
+Often abbreviated as "W2K," Windows 2000 is an operating system for business desktop and laptop systems to run software applications, connect to Internet and intranet sites, and access files, printers, and network resources. Microsoft released four versions of Windows 2000: Professional (for business desktop and laptop systems), Server (both a Web server and an office server), Advanced Server (for line-of-business applications) and Datacenter Server (for high-traffic computer networks).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Windows XP (October 2001)
+Windows XP was released in 2001. Along with a redesigned look and feel to the user interface, the new operating system is built on the Windows 2000 kernel, giving the user a more stable and reliable environment than previous versions of Windows. Windows XP comes in two versions, Home and Professional. Microsoft focused on mobility for both editions, including plug and play features for connecting to wireless networks. The operating system also utilizes the 802.11x wireless security standard. Windows XP is one of Microsoft's best-selling products.
+
+Windows Vista (November 2006)
+Windows Vista offered an advancement in reliability, security, ease of deployment, performance and manageability over Windows XP. New in this version was capabilities to detect hardware problems before they occur, security features to protect against the latest generation of threats, faster start-up time and low power consumption of the new sleep state. In many cases, Windows Vista is noticeably more responsive than Windows XP on identical hardware. Windows Vista simplifies and centralizes desktop configuration management, reducing the cost of keeping systems updated.
+
+
+
+Windows 7 (October, 2009)
+Windows 7 was released by Microsoft on October 22, 2009 as the latest in the 25-year-old line of Windows operating systems and as the successor to Windows Vista (which itself had followed Windows XP). Windows 7 was released in conjunction with Windows Server 2008 R2, Windows 7's server counterpart. Enhancements and new features in Windows 7 include multi-touch support, Internet Explorer 8, improved performance and start-up time, Aero Snap, Aero Shake, support for virtual hard disks, a new and improved Windows Media Center, and improved security.
+Windows 8
+                    
+
+
+
+
+
+
+
+
+
+
+
+Windows 8 was released on August. 1, 2012 and is a completely redesigned operating system that's been developed from the ground up with touchscreen use in mind as well as near-instant-on capabilities that enable a Windows 8 PC to load and start up in a matter of seconds rather than in minutes.
+Windows 8 will replace the more traditional Microsoft Windows OS look and feel with a new "Metro" design system interface that first debuted in the Windows Phone 7 mobile operating system. The Metro user interface primarily consists of a "Start screen" made up of "Live Tiles," which are links to applications and features that are dynamic and update in real time. Windows 8 supports both x86 PCs and ARM processors.
+
+	Windows 10
+Windows 10 is Microsoft's Windows successor to Windows 8. Windows 10 debuted on July 29, 2015, following a "technical preview" beta release of the new operating system that arrived in Fall 2014 and a "consumer preview" beta in early 2015. Microsoft claims Windows 10 features fast start up and resume, built-in security and the return of the Start Menu in an expanded form. This version of Windows will also feature Microsoft Edge, Microsoft's new browser. Any qualified device (such as tablets, PCs, smartphones and Xbox consoles) can upgrade to Windows 10, including those with pirated copies of Windows.
+
+
+ 
+ 
+	                                                    EXPERIMENT NO 9
+                AIM: Demonstrate features, tools and accessories of Windows 98.
+Windows 98 is released by Microsoft in June 25, 1998. It is a mixed 16 bit/32 bit Windows operating system. The version number is 4.1 and the code name is Menphis.
+
+Introduction
+Windows98 has integrated the Internet standard comprehensively. It unifys ans simplifys desktop with Internet technology and allows the users to find and browse the information on the computer or on the internet more simply and faster. It has a faster speed and greater stability. With the brand new self-maintenance and updating function, users can have more spare time to concentrate on work or games instead of system management.
+
+Features
+This new system is edited on the base of Windows95. It improves the hardware standard, such as MMX, and AGP. It has other features like supporting FAT32 file system, multi-display, Web TV and the Internet Explorer integrated to the Windows GUI. That is called Active Desktop.
+
+Besides, in the internal memory management, it improved the problem that when the 16 bit and 32 bit source code are saved to one same storage space, one program error will cause the whole system downtime. From Windows98, the reformation of memory management is to put 16 bit and 32 bit source code to different memory spaces. Once there is a program error, you can just stop that program and the system will not be affected.
+
+Advantages
+A great improvement compared to Windows95
+
+1.	Convenient to install: when installing Windows98, system will lead you to complete the installation, and examine all the common hardwares such as moderm, CD-ROM driver, audio card, and printer, etc.
+
+2.	 More coordinating with the present soft and hard wares: Windows98 provides internal support for more than 1900 present hardware devices, and has passed the test of compatibility with more than 3500 popular softwares. The internal support includes the 32 bit device driver program. That means the hardware being supported will run faster and more effectively under Windows98 environment.
+ 
+3.	Plug and paly function: when you are using the "plug and play" device on the computer Windows98 will set it automatically.
+4.	Improved UI: the desktop of Windows98 makes you concentrate more on your own task. There are only a few graphic objests on the desktop, and that is simpler than before. The "start" button leads you to start the daily work with the computer. If you want to quickly start a frequently-used program or document, you can just pull it to the "start" button. It will be listed with other functions (like set-up procedure, open a document, get help, change system settings, and find files) together in the "start" menu. "My computer" makes browsing the content (all kinds of files, folders, and procedures) of computer more convenient. "Network neiborhood" makes examing and using network simpler. "Recycle bin" provides you a temporary space for placing deleted files. You can choose to shift delete or get back to use.
+5.	Provide better support for MS-DOS without MS-DOS: different from Windows3.1, Windows98 will not run on the MS-DOS operating system. Windows98 is a tightly integrated system. It enters into the GUI directly instead of command line. But Windows98 still supports MS-DOS.
+6.	Support long file name: in Windows98, the longest file name can be 255 characters. That makes finding files very easy.
+7.	The function of mouse stands out: in Windows98, point to any object with the mouse pointer and click the right button, you will see a pop-up menu that lists out all the orders related to the object. With this menu, you can copy, delete, rename, create shortcut, and view the file and folder's attributes.
+8.	Added and improved the tools of accessories: Windows98 provides a group of tools that adapts to the new interface. "Tablet" is the 32 bit editor. It replaces the "Write" and "Notebook" of Windows3.1. "Picture" is the 32 bit tool that replaces "Brush". As "Picture" is the OLE software, its images can be connected or inset to other documents. The backup of 32 bit makes the backup from computer or disk, magcard easier.
+9.	Connection with Internet: after the installation of IE4.0 in Windows98, there is a option to open active desktop. That makes IE4.0 one intefrated part of Windows98 desktop. Through choosing active desktop, users can set the wallpaper as the HTML page that can directly get informations from Internet. Besides, changing the traditional explorer to the Internet Explorer makes different Windows intefaces. "Start" menu includes address bar and interlinkage, collection, and so on, making net play more covenient.
+
+
+
+ 
+ 
+                               EXPERIMENT NO 10
+AIM: Demonstrate features of LINUX.
+Linux is one of popular version of UNIX operating System. It is open source as its source code is freely available. It is free to use. Linux was designed considering UNIX compatibility. Its functionality list is quite similar to that of UNIX.
+
+Components of Linux System:
+Linux Operating System has primarily three components
+•	Kernel − Kernel is the core part of Linux. It is responsible for all major activities of this operating system. It consists of various modules and it interacts directly with the underlying hardware. Kernel provides the required abstraction to hide low level hardware details to system or application programs.
+•	System Library − System libraries are special functions or programs using which application programs or system utilities accesses Kernel's features. These libraries implement most of the functionalities of the operating system and do not requires kernel module's code access rights.
+•	System Utility − System Utility programs are responsible to do specialized, individual level tasks.
+ 
+Kernel Mode vs User Mode
+Kernel component code executes in a special privileged mode called kernel mode with full access to all resources of the computer. This code represents a single process, executes in single address space and do not require any context switch and hence is very efficient and fast. Kernel runs each processes and provides system services to processes, provides protected access to hardware to processes.
+Support code which is not required to run in kernel mode is in System Library. User programs and other system programs works in User Mode which has no access to system hardware and kernel code. User programs/ utilities use System libraries to access Kernel functions to get system's low level tasks.
+Basic Features:
+Following are some of the important features of Linux Operating System.
+•	Portable − Portability means software can works on different types of hardware in same way. Linux kernel and application programs supports their installation on any kind of hardware platform.
+•	Open Source − Linux source code is freely available and it is community based development project. Multiple teams work in collaboration to enhance the capability of Linux operating system and it is continuously evolving.
+•	Multi-User − Linux is a multiuser system means multiple users can access system resources like memory/ ram/ application programs at same time.
+•	Multiprogramming − Linux is a multiprogramming system means multiple applications can run at same time.
+•	Hierarchical File System − Linux provides a standard file structure in which system files/ user files are arranged.
+•	Shell − Linux provides a special interpreter program which can be used to execute commands of the operating system. It can be used to do various types of operations, call application programs. etc.
+•	Security − Linux provides user security using authentication features like password protection/ controlled access to specific files/ encryption of data.
+Architecture:
+The following illustration shows the architecture of a Linux system −
+ 
+The architecture of a Linux System consists of the following layers −
+•	Hardware layer − Hardware consists of all peripheral devices RAM/HDD/CPUetcRAM/HDD/CPUetc.
+•	Kernel − It is the core component of Operating System, interacts directly with hardware, provides low level services to upper layer components.
+•	Shell − An interface to kernel, hiding complexity of kernel's functions from users. The shell takes commands from the user and executes kernel's functions.
+•	Utilities − Utility programs that provide the user most of the functionalities of an operating systems.
+                                              
+ 
+                                 
+                                         EXPERIMENT NO 11
+AIM: Demonstrate features of UNIX.
+The Unix operating system is a set of programs that act as a link between the computer and the user.The computer programs that allocate the system resources and coordinate all the details of the computer's internal is called the operating system or the kernel.Users communicate with the kernel through a program known as the shell. The shell is a command line interpreter; it translates commands entered by the user and converts them into a language that is understood by the kernel.
+•	Unix was originally developed in 1969 by a group of AT&T employees Ken Thompson, Dennis Ritchie, Douglas McIlroy, and Joe Ossanna at Bell Labs.
+•	There are various Unix variants available in the market. Solaris Unix, AIX, HP Unix and BSD are a few examples. Linux is also a flavor of Unix which is freely available.
+•	Several people can use a Unix computer at the same time; hence Unix is called a multiuser system.
+•	A user can also run multiple programs at the same time; hence Unix is a multitasking environment.
+Unix Architecture
+Here is a basic block diagram of a Unix system −
+ 
+
+   The main concept that unites all the versions of Unix is the following four basics −
+•	Kernel − The kernel is the heart of the operating system. It interacts with the hardware and most of the tasks like memory management, task scheduling and file management.
+•	Shell − The shell is the utility that processes your requests. When you type in a command at your terminal, the shell interprets the command and calls the program that you want. The shell uses standard syntax for all commands. C Shell, Bourne Shell and Korn Shell are the most famous shells which are available with most of the Unix variants.
+•	Commands and Utilities − There are various commands and utilities which you can make use of in your day to day activities. cp, mv, cat and grep, etc. are few examples of commands and utilities. There are over 250 standard commands plus numerous others provided through 3rd party software. All the commands come along with various options.
+•	Files and Directories − All the data of Unix is organized into files. All files are then organized into directories. These directories are further organized into a tree-like structure called the filesystem.
+Features of UNIX Operating system:
+•	Multiuser: A multi-user Operating system allows more than one user to share the same computer system at the same time.
+•	 Multi Tasking: More than one program can be run at a time. The main concept of multitasking is maximum utilizing CPU resources
+•	Open System: The UNIX is open source code i.e Any user can modified Unix open source code according their ideas and requirements.
+
+                               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        
+
+
+                                                             EXPERIMENT NO 12
+AIM: Demonstrate features of DOS.
+The DOS (Disk Operating System) is the old and single user Operating System in the computer. Though it is not used by many people at present, it is better to study DOS with a view to understand how the files are created, maintained and copied in the computer. As this operating system is mainly dealing with different disks like floppy, hard disk etc., it is called as Disk Operating System (DOS).
+
+When we open the computer, it makes the system to work in its internal parts like RAM, ROM and other peripherals. Then it will check whether the operating system has been loaded in it or not. If it is loaded, it will start work. Disk operating system is thus that part of system which will co-ordinate all the parts of the computer.
+Functions of DOS (Disk Operating System)
+1.	It takes commands from the keyboard and interprets them. 
+2.	It shows all the files in the system.
+3.	It creates new files and allots space for programme. 
+4.	It changes the name of a file in place of old name. 
+5.	It copies information in a floppy.
+6.	It helps in locating a file. 
+7.	It searchers where the file is located in the disk. 
+8.	If we want the information in the file to be printed, it gives printout of the information. 
+9.	It hides the files and directories so as not to be seen by others. 
+10.It permanently removes the file. 
+Features of DOS
+The primitive operating system of DOS has the following features
+1.	It is the primary system where the user will get an environment about the input and output deviates, e.g. Monitor, Keyboard, Printers etc.
+2.	It is helpful in performing file management e.g., creating, editing, deleting files etc.
+3.	It is a single user operating system. One user can operate at one time in this operating system. 
+4.	It is Character Based interface system. We can type letters (or characters in this operating system). 
+
+
+
+
+
+
+
+
+
+
+                                
+
+
+
+                                 EXPERIMENT NO 14
+AIM: Prepare a brief report on features and benefits of Unix Operating System.
+Features of the UNIX Operating System
+High reliability, scalability and powerful features make UNIX a popular operating system, according to Intel. Now beyond its 40th year as of 2010, UNIX is the backbone of many data centers including the Internet. Big players using UNIX include Sun Microsystems, Apple Inc., Hewlett-Packard and AT&T, which is the original parent company of UNIX. The Open Group owns all UNIX specifications and the trademark, which are freely accessible and available over the Internet.
+ 
+
+Multitasking and Portability
+
+The main features of UNIX include multiuser, multitasking and portability capabilities. Multiple users access the system by connecting to points known as terminals. Several users can run multiple programs or processes simultaneously on one system. UNIX uses a high-level language that is easy to comprehend, modify and transfer to other machines, which means you can change language codes according to the requirements of new hardware on your computer. You, therefore, have the flexibility to choose any hardware, modify the UNIX codes accordingly and use UNIX across multiple architectures.
+
+The Kernel and the Shell
+
+The hub of a UNIX operating system, the kernel manages the applications and peripherals on a system. Together, the kernel and the shell carry out your requests and commands. You communicate with your system through the UNIX shell, which translates to the kernel. When you turn on your terminal, a system process starts that overlooks your inputs. When you enter your password, the system associates the shell program with your terminal.  
+
+Files and Processes
+
+All the functions in UNIX involve either a file or a process. Processes are executions of  programs, while files are collections of data created by you. Files may include a document, programming instructions for the system or a directory. UNIX uses a hierarchical file structure in its design that starts with a root directory--signified by the forward slash (/). The root is followed by its subdirectories, as in an inverted tree, and ends with the file. In the example "/Demand/Articles/UNIX.doc," the main directory "Demand" has a subdirectory "Articles," which has a file "UNIX.doc."
+
+
+
+
+
+
+Advantages
+•	Full multitasking with protected memory. Multiple users can run multiple programs each at the same time without interfering with each other or crashing the system.
+•	Very efficient virtual memory, so many programs can run with a modest amount of physical memory.
+•	Access controls and security. All users must be authenticated by a valid account and password to use the system at all. All files are owned by particular accounts. The owner can decide whether others have read or write access to his files.
+ 
+•	A rich set of small commands and utilities that do specific tasks well -- not cluttered up with lots of special options. Unix is a well-stocked toolbox, not a giant do-it-all Swiss Army Knife.
+•	Ability to string commands and utilities together in unlimited ways to accomplish more complicated tasks -- not limited to preconfigured combinations or menus, as in personal computer systems.
+•	A powerfully unified file system. Everything is a file: data, programs, and all physical devices. Entire file system appears as a single large tree of nested directories, regardless of how many different physical devices (disks) are included.
+
